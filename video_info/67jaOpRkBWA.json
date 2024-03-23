@@ -1,0 +1,84 @@
+{
+    "video_id": "67jaOpRkBWA",
+    "video_details": {
+        "kind": "youtube#videoListResponse",
+        "etag": "o7rMSLW6TYXgQTTUl0ynbB6R5Qo",
+        "items": [
+            {
+                "kind": "youtube#video",
+                "etag": "ZBaGN9Gj-byMlNqDuRUpndmqtJU",
+                "id": "67jaOpRkBWA",
+                "snippet": {
+                    "publishedAt": "2024-03-12T00:27:51Z",
+                    "channelId": "UCBi2mrWuNuyYy4gbM6fU18Q",
+                    "title": "80 years after D-Day, World War II veteran is getting married near beaches where U.S. troops landed",
+                    "description": "A 100-year-old World War II veteran is getting married to his 96-year-old fianc\u00e9e \u2014 and they plan to hold the ceremony in a town near the French beaches where U.S. troops landed 80 years ago.\n\nHarold Terens and his fianc\u00e9e Jeanne Swerlin plan to marry in France in June. Terens will be honored by the French as part of the 80th anniversary celebration of their country's liberation from the Nazis.\n\nSubscribe to ABC News on YouTube: https://abcnews.visitlink.me/59aJ1G\n\nWatch 24/7 coverage of breaking news and live events on ABC News Live: https://www.youtube.com/watch?v=gN0PZCe-kwQ&ab_channel=ABCNews \n\nWatch full episodes of World News Tonight with David Muir here: https://youtube.com/playlist?list=PLQOa26lW-uI8ixlVw1NWu_l4Eh8iZW_qN&feature=shared \n\nRead ABC News reports online: http://abcnews.go.com\n\nABC News Digital is your daily source of breaking national and world news, exclusive interviews and 24/7 live streaming coverage. ABC News is the home to the #1 evening newscast \u201cWorld News Tonight\u201d with David Muir, \u201cGood Morning America,\u201d \u201c20/20,\u201d \u201cNightline,\u201d \u201cThis Week\u201d with George Stephanopoulos, \u201cABC News Live Prime\u201d with Linsey Davis, plus the daily news podcast \u201cStart Here.\u201d\n\nConnect with ABC News on social media: \nFacebook: https://www.facebook.com/ABCNews \nInstagram: https://www.instagram.com/abcnews \nTikTok: https://www.tiktok.com/@abcnews \nX: https://twitter.com/ABC  \nThreads: https://www.threads.net/@abcnews \nLinkedIn: https://www.linkedin.com/company/abcnews",
+                    "thumbnails": {
+                        "default": {
+                            "url": "https://i.ytimg.com/vi/67jaOpRkBWA/default.jpg",
+                            "width": 120,
+                            "height": 90
+                        },
+                        "medium": {
+                            "url": "https://i.ytimg.com/vi/67jaOpRkBWA/mqdefault.jpg",
+                            "width": 320,
+                            "height": 180
+                        },
+                        "high": {
+                            "url": "https://i.ytimg.com/vi/67jaOpRkBWA/hqdefault.jpg",
+                            "width": 480,
+                            "height": 360
+                        },
+                        "standard": {
+                            "url": "https://i.ytimg.com/vi/67jaOpRkBWA/sddefault.jpg",
+                            "width": 640,
+                            "height": 480
+                        },
+                        "maxres": {
+                            "url": "https://i.ytimg.com/vi/67jaOpRkBWA/maxresdefault.jpg",
+                            "width": 1280,
+                            "height": 720
+                        }
+                    },
+                    "channelTitle": "ABC News",
+                    "tags": [
+                        "news",
+                        "breaking news",
+                        "live news",
+                        "daily news",
+                        "world news",
+                        "us news"
+                    ],
+                    "categoryId": "25",
+                    "liveBroadcastContent": "none",
+                    "localized": {
+                        "title": "80 years after D-Day, World War II veteran is getting married near beaches where U.S. troops landed",
+                        "description": "A 100-year-old World War II veteran is getting married to his 96-year-old fianc\u00e9e \u2014 and they plan to hold the ceremony in a town near the French beaches where U.S. troops landed 80 years ago.\n\nHarold Terens and his fianc\u00e9e Jeanne Swerlin plan to marry in France in June. Terens will be honored by the French as part of the 80th anniversary celebration of their country's liberation from the Nazis.\n\nSubscribe to ABC News on YouTube: https://abcnews.visitlink.me/59aJ1G\n\nWatch 24/7 coverage of breaking news and live events on ABC News Live: https://www.youtube.com/watch?v=gN0PZCe-kwQ&ab_channel=ABCNews \n\nWatch full episodes of World News Tonight with David Muir here: https://youtube.com/playlist?list=PLQOa26lW-uI8ixlVw1NWu_l4Eh8iZW_qN&feature=shared \n\nRead ABC News reports online: http://abcnews.go.com\n\nABC News Digital is your daily source of breaking national and world news, exclusive interviews and 24/7 live streaming coverage. ABC News is the home to the #1 evening newscast \u201cWorld News Tonight\u201d with David Muir, \u201cGood Morning America,\u201d \u201c20/20,\u201d \u201cNightline,\u201d \u201cThis Week\u201d with George Stephanopoulos, \u201cABC News Live Prime\u201d with Linsey Davis, plus the daily news podcast \u201cStart Here.\u201d\n\nConnect with ABC News on social media: \nFacebook: https://www.facebook.com/ABCNews \nInstagram: https://www.instagram.com/abcnews \nTikTok: https://www.tiktok.com/@abcnews \nX: https://twitter.com/ABC  \nThreads: https://www.threads.net/@abcnews \nLinkedIn: https://www.linkedin.com/company/abcnews"
+                    },
+                    "defaultAudioLanguage": "en-US"
+                },
+                "contentDetails": {
+                    "duration": "PT33S",
+                    "dimension": "2d",
+                    "definition": "hd",
+                    "caption": "false",
+                    "licensedContent": true,
+                    "contentRating": {},
+                    "projection": "rectangular"
+                },
+                "statistics": {
+                    "viewCount": "2",
+                    "likeCount": "0",
+                    "favoriteCount": "0",
+                    "commentCount": "0"
+                }
+            }
+        ],
+        "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+        }
+    },
+    "video_transcript": "a 100-year-old US World War II veteran is getting married to his 96-year-old fiance they'll hold the ceremony in a town near the French beaches where US troops landed 80 years ago Harold teren and his fiance Jean swiland planned to marry in France in June the 100-year-old teren first visited the country as a 20-year-old US Army Air cor Corporal shortly after dday they will honor him as part of France's 80th anniversary celebrating its Liberation from the IES",
+    "video_comments": []
+}
