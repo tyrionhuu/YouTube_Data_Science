@@ -1,0 +1,10 @@
+comment,sentiment_gemini,sentiment_vader,sentiment_textblob,target,stance
+this is beyond ridiculous they are trying their best to ruin this man but god has a plan for trump and god will have the final say trump 2024 love from canada,1.0,0.8898,0.2916666666666667,Trump,PRO
+well bypass you all need him reelected to grow america,1.0,0.2732,0.0,well bypass you,NEUTRAL
+all this does is expose the political witchhunt perpetrated on president trump he will be president again in november,1.0,-0.1531,0.0,President Trump,AGAINST
+best news ive heard all day,1.0,0.6369,1.0,Fox News,NONE
+trump is going to win soooo big in november,1.0,0.5859,0.4,trump,NONE
+i love this for donald,1.0,0.6369,0.5,donald,PRO
+great to see justice catch up to the trump crime family,1.0,0.6124,0.8,Trump,AGAINST
+i dont even like trump but ill send him money and would crawl through a field of broken glass and rattle snakes to vote for him,1.0,-0.8557,-0.45,Trump,PRO
+yay vote blue,1.0,0.5267,0.0,yay vote blue,NONE

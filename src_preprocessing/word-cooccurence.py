@@ -119,7 +119,7 @@ def visualize_co_occurrence_graph(co_occurrence_graph, threshold):
 
 def main():
     # Load comments from JSON
-    comments = load_comments_from_json("../preprocessed_data/tokenized_comments.json")
+    comments = load_comments_from_json("../preprocessed_comments/tokenized_comments.json")
 
     # Create co-occurrence matrix
     co_occurrence_matrix, words = create_co_occurrence_matrix(comments)

@@ -38,7 +38,7 @@ def save_to_csv(data, filename):
 
 
 # Load the data from JSON
-with open("../preprocessed_data/tokenized_comments.json", "r") as json_file:
+with open("../preprocessed_comments/tokenized_comments.json", "r") as json_file:
     json_data = json.load(json_file)
 
 # Analyze word frequency
@@ -48,7 +48,7 @@ word_counts = analyze_word_frequency(json_data)
 word_counts = sorted(word_counts, key=lambda x: x[1], reverse=True)
 
 # Save word counts to a CSV file
-csv_file = "../preprocessed_data/word_frequency.csv"
+csv_file = "../preprocessed_comments/word_frequency.csv"
 save_to_csv(word_counts, csv_file)
 
 print("Word frequency saved to word_frequency.csv")
@@ -101,7 +101,7 @@ def visualize_word_frequency(word_frequencies, top_n=20):
 
 
 # Load word frequencies from CSV
-word_frequencies = load_from_csv("../preprocessed_data/word_frequency.csv")
+word_frequencies = load_from_csv("../preprocessed_comments/word_frequency.csv")
 
 # Visualize top N most frequent words using a horizontal bar plot
 visualize_word_frequency(word_frequencies, top_n=20)

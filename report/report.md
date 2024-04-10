@@ -93,6 +93,8 @@ The sentiment score is hardly correlated with the cluster, suggesting that there
 
 <img src="img/sentiment_scores_textblob-0494118.png" alt="sentiment_scores_textblob" style="zoom:67%;" />
 
+
+
 ## Fine-tuning Large Language Model
 
 ## Stance detection based on Knowledge Graph
