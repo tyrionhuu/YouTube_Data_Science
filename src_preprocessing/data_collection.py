@@ -1,10 +1,8 @@
-import os
 import json
-import time
-import tqdm
+import urllib.parse as p
+
 from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
-import urllib.parse as p
 
 DEVELOPER_KEY = 'AIzaSyAiTWskBEIJVFrneK99_afD97mrff6yah0'
 YOUTUBE_API_SERVICE_NAME = 'youtube'

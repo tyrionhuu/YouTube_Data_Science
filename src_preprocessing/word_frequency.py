@@ -1,6 +1,7 @@
 import csv
-from collections import Counter
 import json
+from collections import Counter
+
 import matplotlib.pyplot as plt
 
 
