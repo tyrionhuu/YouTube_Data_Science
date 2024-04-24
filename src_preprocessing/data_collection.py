@@ -33,12 +33,21 @@ def get_video_details(youtube, **kwargs):
 
 
 def get_video_transcript(video_id):
-    transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-    transcript_text = ""
-    for transcript in transcript_list:
-        for item in transcript.fetch():
+    # transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+    # transcript_text = ""
+    # for transcript in transcript_list:
+    #     for item in transcript.fetch():
+    #         transcript_text += item['text'] + " "
+    # return transcript_text.strip()
+    try:
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+        transcript_text = ""
+        for item in transcript_list:
             transcript_text += item['text'] + " "
-    return transcript_text.strip()
+        return transcript_text.strip()
+    except Exception as e:
+        print("An error occurred:", e)
+        return ""
 
 
 def get_comment_replies(youtube, comment_id):
@@ -134,7 +143,7 @@ def main():
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
     # Get video details
-    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=DT5jDcXVm6E")
+    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=cplSUhU2avc")
     video_details = get_video_details(youtube, id=video_id)
     video_comments = get_video_comments(youtube, video_id)
     video_transcript = get_video_transcript(video_id)
