@@ -1,0 +1,11 @@
+comment,sentiment_gemini,sentiment_vader,target,stance
+this will be overturned,-0.4,0.0,this will be overturned,AGAINST
+trump is guilty face facts magats you all worship a conman trumps a criminal trumps a rapist the magats are so proud of that fact,-0.9998,-0.7103,trump,AGAINST
+i support and stand by trump love trump trump 2024,1.0,0.7845,Trump,PRO
+tired of winning yet lmfao,0.32,0.6124,Trump,AGAINST
+these shortsighted monsters forget that payback can be horrible,-0.673,-0.6597,Trump,AGAINST
+the state of new york and e jean carroll thank trump supporters for paying his legal fines,0.65,0.7096,New York,PRO
+new york is way worse than an outhouseno wonder the city is so full of rats,-0.9,-0.4767,new york,AGAINST
+fox news actually honest,0.8,0.5106,Fox News,PRO
+ny is a shizhole,-0.367,0.0,New York,AGAINST
+so satisfying to watch you all crying over conalds loss,-0.7,-0.2748,Donald Trump,PRO
