@@ -69,7 +69,7 @@ def get_channel_videos_14_days_ago(channel_id):
         videos.append(video_info)
 
     # Save the videos to a CSV file
-    csv_file = f'../videos/{date_str}.csv'
+    csv_file = f'/home/tianyu/YouTube_Data_Science/time_series/videos/{date_str}.csv'
     # Create the videos
     if not os.path.exists(csv_file):
         with open(csv_file, 'w', newline='') as file:
