@@ -1,3 +1,5 @@
+import os
+
 from googleapiclient.discovery import build
 from datetime import datetime, timedelta
 import csv
@@ -68,10 +70,14 @@ def get_channel_videos_14_days_ago(channel_id):
 
     # Save the videos to a CSV file
     csv_file = f'../videos/{date_str}.csv'
+    # Create the videos
+    if not os.path.exists(csv_file):
+        with open(csv_file, 'w', newline='') as file:
+            writer = csv.DictWriter(file, fieldnames=videos[0].keys())
+            writer.writeheader()
+
     with open(csv_file, 'a', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=videos[0].keys())
-        if file.tell() == 0:
-            writer.writeheader()
         for video in videos:
             writer.writerow(video)
         # Print the number of videos saved
