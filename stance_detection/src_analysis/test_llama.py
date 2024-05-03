@@ -37,8 +37,7 @@ Answer: """
     model = Llama(
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
-        echo=True,
-        verbose=False
+        echo=True
     )
     # Use the model to predict the political stance
     response = model(
