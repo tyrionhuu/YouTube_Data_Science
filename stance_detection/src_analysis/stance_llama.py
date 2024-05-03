@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import re
 
-my_model_path = '../models/Meta-Llama-3-70B-Instruct.Q4_0.gguf'
+my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
 CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
@@ -78,5 +78,5 @@ titles = [f.split('.')[0] for f in original_files]
 for title in titles:
     comments_file = [f for f in comments_files if title in f][0]
     comments = pd.read_csv(comments_directory + comments_file)
-    comments['stance_llama_70b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
+    comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
     comments.to_csv(comments_directory + comments_file, index=False)
