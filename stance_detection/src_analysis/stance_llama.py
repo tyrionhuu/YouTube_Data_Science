@@ -3,9 +3,7 @@ import os
 import pandas as pd
 import re
 
-
 my_model_path = '../models/Meta-Llama-3-70B-Instruct.Q4_0.gguf'
-
 CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
@@ -41,15 +39,18 @@ Answer: The comment is """
         echo=True,
         verbose=False
     )
-    if len(system_content + prompt) > 512:
-        print("Text too long, skipping")
+
+    try:
+        # Use the model to predict the political stance
+        response = model(
+            system_content + prompt,
+            temperature=0.5,
+            stop=['.'],
+        )["choices"][0]["text"]
+    except ValueError as e:
+        print(f"Error occurred: {e}")
+        print("Skipping...")
         return "OTHER"
-    # Use the model to predict the political stance
-    response = model(
-        system_content + prompt,
-        temperature=0.5,
-        stop=['.'],
-    )["choices"][0]["text"]
 
     # Extract stance from response
     stance = re.search(r'(CONSERVATIVE|LIBERAL|OTHER)', response.upper())
@@ -67,8 +68,7 @@ Answer: The comment is """
 
     return stance
 
-# target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President
-# Biden’s 2024 State of the Union address")
+# Retrieve comments files and process each one
 comments_directory = '../preprocessed_comments/'
 comments_files = [f for f in os.listdir(comments_directory)]
 original_directory = '../data2/'
@@ -80,4 +80,3 @@ for title in titles:
     comments = pd.read_csv(comments_directory + comments_file)
     comments['stance_llama_70b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
     comments.to_csv(comments_directory + comments_file + '70B', index=False)
-
