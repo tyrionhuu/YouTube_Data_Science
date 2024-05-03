@@ -79,4 +79,4 @@ for title in titles:
     comments_file = [f for f in comments_files if title in f][0]
     comments = pd.read_csv(comments_directory + comments_file)
     comments['stance_llama_70b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
-    comments.to_csv(comments_directory + comments_file + '70B', index=False)
+    comments.to_csv(comments_directory + comments_file, index=False)
