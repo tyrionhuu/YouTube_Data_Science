@@ -36,7 +36,7 @@ def get_video_statistics(video_id):
 # Function to retrieve videos from a channel 14 days ago and save them to a CSV file
 def get_channel_videos_14_days_ago(channel_id):
     # Get the date 14 days ago
-    date_14_days_ago = datetime.now() - timedelta(days=15)
+    date_14_days_ago = datetime.now() - timedelta(days=14)
     date_str = date_14_days_ago.strftime('%Y-%m-%d')
 
     # Call the API to retrieve videos from the channel 14 days ago
