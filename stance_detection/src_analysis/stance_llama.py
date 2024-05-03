@@ -70,7 +70,7 @@ Answer: The comment is """
 # target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President
 # Biden’s 2024 State of the Union address")
 comments_directory = '../preprocessed_comments/'
-comments_files = [f for f in os.listdir(comments_directory) if f.endswith('liked.csv')]
+comments_files = [f for f in os.listdir(comments_directory) if f.endswith('cleaned.csv')]
 original_directory = '../data2/'
 original_files = [f for f in os.listdir(original_directory) if f.endswith('.json')]
 titles = [f.split('.')[0] for f in original_files]
