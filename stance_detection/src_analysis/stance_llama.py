@@ -41,6 +41,9 @@ Answer: The comment is """
         echo=True,
         verbose=False
     )
+    if len(system_content + prompt) > 4096:
+        print("Text too long, skipping")
+        return "OTHER"
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,

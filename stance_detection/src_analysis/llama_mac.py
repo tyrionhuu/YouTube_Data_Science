@@ -6,7 +6,7 @@ import re
 
 my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q4_0.gguf'
 
-CONTEXT_SIZE = 10000
+CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
     system_content = f"""
@@ -41,6 +41,9 @@ Answer: The comment is """
         echo=True,
         verbose=True
     )
+    if len(system_content + prompt) > 4096:
+        print("Text too long, skipping")
+        return "OTHER"
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,
