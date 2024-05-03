@@ -9,21 +9,21 @@ my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
 CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
-    system_content = f"""You are master of all knowledge about history, literature, science, social science, philosophy, 
-religion, economics, sports, etc."""
+    system_content = f"""
+You are master of all knowledge about US politics and history, literature, science, social science, philosophy,"""
 
     prompt = f"""
 # CONTEXT #
-We are looking into a huge amount of comments on YouTube videos that are from news channels like CNN, Fox News, MSNBC, 
-etc. We are interested in understanding the political stance of the comments. The comments can be about the video,
-the news, or the political figures. The political stance can be conservative, liberal, or other
+We are looking into a huge amount of comments on YouTube videos that are from US news channels like CNN, Fox News, 
+MSNBC, etc. We are interested in understanding the political stance of the comments. The comments can be about the 
+video,the news, or the political figures. The political stance can be conservative, liberal, or other
 
 #################
 
 # OBJECTIVE #
-You are a political stance classifier. You are given a political news video. 
-Your task is to analyze the given comment and identify its political stance as one of the following: 
-conservative, liberal, or other
+You are a political stance classifier. You are given a US political news video. 
+Your task is to analyze the given comment and identify its political stance in the US political spectrum 
+as one of the following: conservative, liberal, or other
 
 #################
 
@@ -39,22 +39,29 @@ Answer: The comment is """
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
         echo=True,
-        verbose=False
+        verbose=True
     )
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,
         temperature=0.5,
-        stop=['.']
+        stop=['.'],
     )["choices"][0]["text"]
-    stance = response.strip().split(' ')[0]
-    stance = re.sub(r'[^\w\s\n]', '', stance).upper()
-    print(text)
-    print('*******************')
-    print(response)
-    print('-------------------')
-    print(stance)
-    print('+++++++++++++++++++++')
+
+    # Extract stance from response
+    stance = re.search(r'(CONSERVATIVE|LIBERAL|OTHER)', response.upper())
+    if stance:
+        stance = stance.group(0)
+    else:
+        stance = "OTHER"  # Default to "OTHER" if no stance is found
+
+    print(f"{text}")
+    print("*******************")
+    print(f"{response}")
+    print("-------------------")
+    print(f"{stance}")
+    print("+++++++++++++++++++++")
+
     return stance
 
 # target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President

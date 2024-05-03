@@ -44,7 +44,7 @@ Answer: The comment is """
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,
-        temperature=0.5,
+        temperature=1.0,
         stop=['.'],
     )["choices"][0]["text"]
 
@@ -64,17 +64,6 @@ Answer: The comment is """
 
     return stance
 
-# target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President
-# Biden’s 2024 State of the Union address")
-comments_directory = '../preprocessed_comments/'
-comments_files = [f for f in os.listdir(comments_directory) if f.endswith('liked.csv')]
-original_directory = '../data2/'
-original_files = [f for f in os.listdir(original_directory) if f.endswith('.json')]
-titles = [f.split('.')[0] for f in original_files]
-
-for title in titles:
-    comments_file = [f for f in comments_files if title in f][0]
-    comments = pd.read_csv(comments_directory + comments_file)
-    comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
-    comments.to_csv(comments_directory + comments_file, index=False)
-
+comment = 'amazing how much joe and this government cares more about ukraine than our own countrys problems'
+video_title = 'CNN-Full Speech: President Biden’s 2024 State of the Union address'
+target_stance_detection(comment, video_title)
