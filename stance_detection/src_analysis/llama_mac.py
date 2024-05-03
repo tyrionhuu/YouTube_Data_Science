@@ -1,4 +1,7 @@
 from llama_cpp import Llama
+import os
+import pandas as pd
+
 
 my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q4_0.gguf'
 
@@ -34,15 +37,30 @@ Answer: """
     model = Llama(
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
-        echo=True
+        echo=True,
+        verbose=False
     )
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,
-        stop=['\n']
+        stop=['.', ' ']
     )["choices"][0]["text"]
     stance = response.strip()
+    print(response)
     print(stance)
     return stance
 
-target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President Biden’s 2024 State of the Union address")
+# target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President
+# Biden’s 2024 State of the Union address")
+comments_directory = '../preprocessed_comments/'
+comments_files = [f for f in os.listdir(comments_directory) if f.endswith('liked.csv')]
+original_directory = '../data2/'
+original_files = [f for f in os.listdir(original_directory) if f.endswith('.json')]
+titles = [f.split('.')[0] for f in original_files]
+
+for title in titles:
+    comments_file = [f for f in comments_files if title in f][0]
+    comments = pd.read_csv(comments_directory + comments_file)
+    comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
+    comments.to_csv(comments_directory + comments_file, index=False)
+
