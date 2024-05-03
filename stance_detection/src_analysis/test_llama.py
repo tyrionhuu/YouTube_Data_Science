@@ -13,7 +13,7 @@ def target_stance_detection(text: str, video_title: str):
                ". Analyze the following comment and identify the political stance in one word: " + text +
                ". Choose from Conservative, Liberal, Other")
     stance = model(message, stop=["."])["choices"][0]["text"]
-    print(text + ": " + stance)
+    print(stance)
     return stance
 
 target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President Biden’s 2024 State of the Union address")
