@@ -1,18 +1,47 @@
 from llama_cpp import Llama
 
 my_model_path = '../models/Meta-Llama-3-70B-Instruct.Q4_0.gguf'
+
 CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
+    system_content = f"""You are master of all knowledge about history, literature, science, social science, philosophy, 
+religion, economics, sports, etc."""
+
+    prompt = f"""
+# CONTEXT #
+We are looking into a huge amount of comments on YouTube videos that are from news channels like CNN, Fox News, MSNBC, 
+etc. We are interested in understanding the political stance of the comments. The comments can be about the video,
+the news, or the political figures. The political stance can be Conservative, Liberal, or Other.
+
+#################
+
+# OBJECTIVE #
+You are a political stance classifier. You are given a political news video. 
+Your task is to analyze the given comment and identify its political stance as one of the following: 
+Conservative, Liberal, or Other.
+
+#################
+
+# REQUIREMENTS #
+You need to provide a one-word answer, either Conservative, Liberal, or Other.
+
+#################
+Question: the comment is: {text}, and the video title is: {video_title}, is the comment Conservative, Liberal, or Other?
+Answer: """
+
+    # Initialize the Llama model
     model = Llama(
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
-        chat_format='llama-3'
+        echo=True
     )
-    message = ("You are a political analyst. You are watching a news video titled: " + video_title +
-               ". Analyze the following comment and identify the political stance in one word: " + text +
-               ". Choose from Conservative, Liberal, Other")
-    stance = model(message, stop=["."])["choices"][0]["text"]
+    # Use the model to predict the political stance
+    response = model(
+        system_content + prompt,
+        stop=['\n']
+    )["choices"][0]["text"]
+    stance = response.strip()
     print(stance)
     return stance
 
