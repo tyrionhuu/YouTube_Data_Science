@@ -74,3 +74,11 @@ Videos from NBCNews saved to /home/tianyu/YouTube_Data_Science/time_series/video
 Videos from BBCNews saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-04-17.csv.
 44 videos saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-04-17.csv from 2024-04-17.
 Videos from aljazeeraenglish saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-04-17.csv.
+Traceback (most recent call last):
+  File "/home/tianyu/YouTube_Data_Science/time_series/src/data_pipeline.py", line 3, in <module>
+    from googleapiclient.discovery import build
+ModuleNotFoundError: No module named 'googleapiclient'
+Traceback (most recent call last):
+  File "/home/tianyu/YouTube_Data_Science/time_series/src/data_pipeline.py", line 3, in <module>
+    from googleapiclient.discovery import build
+ModuleNotFoundError: No module named 'googleapiclient'
