@@ -1,6 +1,7 @@
 from llama_cpp import Llama
 import os
 import pandas as pd
+import re
 
 
 my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
@@ -15,38 +16,45 @@ religion, economics, sports, etc."""
 # CONTEXT #
 We are looking into a huge amount of comments on YouTube videos that are from news channels like CNN, Fox News, MSNBC, 
 etc. We are interested in understanding the political stance of the comments. The comments can be about the video,
-the news, or the political figures. The political stance can be Conservative, Liberal, or Other.
+the news, or the political figures. The political stance can be conservative, liberal, or other
 
 #################
 
 # OBJECTIVE #
 You are a political stance classifier. You are given a political news video. 
 Your task is to analyze the given comment and identify its political stance as one of the following: 
-Conservative, Liberal, or Other.
+conservative, liberal, or other
 
 #################
 
 # REQUIREMENTS #
-You need to provide a one-word answer, either Conservative, Liberal, or Other.
+You need to provide a one-word answer, either conservative, liberal, or other
 
 #################
-Question: the comment is: {text}, and the video title is: {video_title}, is the comment Conservative, Liberal, or Other?
-Answer: """
+Question: the comment is: {text}, and the video title is: {video_title}, is the comment conservative, liberal, or other?
+Answer: The comment is """
 
     # Initialize the Llama model
     model = Llama(
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
-        echo=True
+        echo=True,
+        verbose=False
     )
     # Use the model to predict the political stance
     response = model(
         system_content + prompt,
-        stop=['.', ' ']
+        temperature=0.5,
+        stop=['.']
     )["choices"][0]["text"]
-    stance = response.strip()
+    stance = response.strip().split(' ')[0]
+    stance = re.sub(r'[^\w\s\n]', '', stance).upper()
+    print(text)
+    print('*******************')
     print(response)
+    print('-------------------')
     print(stance)
+    print('+++++++++++++++++++++')
     return stance
 
 # target_stance_detection("true american president should not bow down to putin period", "CNN-Full Speech: President
