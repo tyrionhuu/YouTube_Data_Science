@@ -6,14 +6,12 @@ CONTEXT_SIZE = 512
 def target_stance_detection(text: str, video_title: str):
     model = Llama(
         model_path=my_model_path,
-        n_ctx=CONTEXT_SIZE
+        n_ctx=CONTEXT_SIZE,
+        chat_format='llama-3'
     )
-    # message = "The following text is a comment on the political news video titled: " + video_title + "\nThe
-    # description of this video is:" + description + "\nIdentify the stance of the following comment towards this
-    # subject: " + text + "\nChoose from Conservative, Liberal, Other"
-    message = ("This news video titled " + video_title + (". Analyze the following comment and identify the political "
-                                                         "stance (liberal, conservative, etc.) in one word: ") + text
-               + "\nChoose from Conservative, Liberal, Other")
+    message = ("You are a political analyst. You are watching a news video titled: " + video_title +
+               ". Analyze the following comment and identify the political stance in one word: " + text +
+               ". Choose from Conservative, Liberal, Other")
     stance = model(message, stop=["."])["choices"][0]["text"]
     print(text + ": " + stance)
     return stance
