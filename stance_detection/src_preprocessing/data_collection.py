@@ -156,7 +156,7 @@ def main():
         "video_comments": video_comments
     }
 
-    with open(f"../data/{video_channel_display_name}-{video_title}.json", "w") as json_file:
+    with open(f"../data3/{video_channel_display_name}-{video_title}.json", "w") as json_file:
         json.dump(video_info, json_file, indent=4)
 
     print("Video details saved to 'video_info.json' file.")
