@@ -1,0 +1,137 @@
+channel,target,headline,sentiment_gemini,sentiment_vader,sentiment_textblob
+CNN,Trump,Haberman speaks out after Trump reportedly glared at her in court,0.0,0.0,0.0
+CNN,Trump,"Trump was admonished for his conduct, and potential jurors were grilled about their social media posts. Here’s what happened.",-0.5,-0.4404,0.016666666666666666
+CNN,Trump,Hear what happened in court after Haberman reported Trump fell asleep,0.0,0.0,0.0
+CNN,Trump,See how Fox News echoed Trump’s lie about son’s graduation,-0.9,0.0,0.0
+CNN,Trump,Potential jurors are being questioned over their social media posts. Trump was admonished for visibly and audibly reacting to one.,0.0,-0.5106,0.016666666666666666
+CNN,Trump,SCOTUS conservatives appear wary of charge against hundreds of Jan. 6 rioters that could impact Trump,0.0,0.0,-0.5
+CNN,Trump,The basic problem with putting Trump on trial,-0.5,-0.4019,0.0
+CNN,Trump,How a trial works: Trump’s first criminal case is in court,0.0,-0.5267,-0.07500000000000001
+CNN,Trump,Ex-Trump Payroll Corp. attorney guesses why Trump motioned at potential juror,0.0,0.0,0.0
+CNN,Trump,The gravity of Trump’s hush money trial,-0.3,0.0,0.0
+CNN,Trump,Trump has an unusual request on trial Day 1,0.0,0.0,0.2
+CNN,Trump,SCOTUS to hear Jan. 6 case that could undermine charges against over 350 rioters and limit charges against Trump,-0.2,-0.6597,0.0
+CNN,Trump,Did Trump fall asleep in court? Why trial is posing challenges for reporters and public,0.0,0.0772,0.0
+CNN,Trump,Courtroom sketch artist on what she noticed about Trump jurors,0.0,0.0,0.0
+CNN,Trump,"Trump says $175 million bond is financially secure, asks judge to reject New York attorney general’s challenge",0.2,-0.0,0.19545454545454546
+CNN,Trump,What Melania did when she learned about Trump’s alleged affair with Stormy Daniels,0.0,0.0,-0.1
+CNN,Trump,"Trump says $175 million bond is financially secure, asks judge to reject challenge",0.2,-0.0,0.4
+CNN,Trump,Woman dismissed from jury pool describes moment she saw Trump in court,0.0,0.0,0.0
+CNN,Trump,There are two criminal trials now taking place: The one in a Manhattan courthouse and the imaginary trial that exists in Trump’s rhetoric,0.0,-0.5267,-0.4
+CNN,Trump,Top takeaways from Day 2 of Trump’s trial,0.0,0.2023,0.5
+CNN,Trump,The world rushes to court Trump,0.0,0.0,0.0
+CNN,Trump,"Your questions about Trump’s trial, answered",0.0,0.0,0.0
+CNN,Trump,A jury that will decide Trump’s fate begins to take shape as first criminal trial powers ahead,0.0,-0.5267,-0.07500000000000001
+CNN,Trump,Trump slams judge as Day 2 of criminal trial begins,-0.3,-0.5267,-0.4
+CNN,Trump,Trump’s extreme rhetoric is a mainstay of his 2024 campaign. Much of it could become a reality if he wins another term,-0.2,0.5719,0.125
+CNN,Trump,What we know about the 7 jurors seated in Trump’s trial,0.0,0.0,0.0
+CNN,Trump,"Trump’s courtroom conduct got him in hot water with the judge, and seven members of the jury were sworn in",0.0,0.0,0.25
+CNN,Trump,Judge scolds Trump for pointing at potential juror,-0.4,0.0,0.0
+CNN,Trump,What Melania Trump really thinks about the hush money trial,0.0,0.0,0.2
+CNN,Trump,‘No chance’: Scaramucci on Trump testifying in hush money trial,-0.4,0.0,0.0
+CNN,Trump,Trump’s stock tumbles again after Truth Social announces it’s getting into streaming,-0.6,0.3182,0.03333333333333333
+CNN,Trump,European diplomats in DC scramble to gain access to Trump allies for insights,-0.22877847205303947,0.5267,0.0
+CNN,Trump,The prosecutor in the hush money trial told potential jurors Trump was like ‘any other defendant in any other criminal case’,0.0,-0.2263,-0.1625
+CNN,Trump,SCOTUS hears Jan. 6 case that could undermine charges against over 350 rioters and limit charges against Trump,-0.5,-0.6597,0.0
+CNN,Trump,Prospective jurors are appearing for the selection process. Trump lamented he should be campaigning instead of attending court.,-0.3,-0.34,0.0
+CNN,Trump,Judge Merchan issued a stern warning to Trump for his reaction to a juror in the courtroom,0.0,-0.34,0.0
+CNN,Trump,Trump will juggle appearances in courtroom and on campaign trail as hush money trial begins,0.0,0.0,0.0
+CNN,Trump,"Trump targets Alvin Bragg, the prosecutor in his criminal case, while visiting site of fatal bodega stabbing",0.0,-0.7845,-0.5
+CNN,Trump,Courtroom sketch artist describes Trump’s demeanor in court,0.0,0.0,0.0
+CNN,Trump,Did Donald Trump fall asleep in court? Why the trial is posing challenges for reporters and the public,0.0,0.0772,0.0
+CNN,Trump,Trump’s hush money trial takeaways,0.0,0.0,0.0
+CNN,Trump,The way the first Trump criminal trial has been misnamed,-0.2,-0.5267,-0.07500000000000001
+CNN,Trump,Takeaways from the second day of jury selection in Trump’s hush money trial,0.0,0.0,0.0
+FOX,Biden,"Black voters reportedly souring on Biden, consider 3rd-party candidates",-0.5,0.0,-0.16666666666666666
+FOX,Biden,"Biden appeases Iran, flip the script on student loan bailouts, and more from Fox News Opinion",-0.8,0.2263,0.5
+FOX,Biden,"Joe Biden doesn't feel our pain, he mocks it. And you know what that means",-1.0,-0.0767,0.0
+FOX,Biden,"AG Garland pressed on Hur report, says Biden 'has no impairment'",0.25,-0.296,0.0
+FOX,Biden,Legal experts say Biden admin's legal theory in Jan 6 prosecution 'on the ropes',-0.8,-0.296,0.2
+FOX,Biden,NEWT GINGRICH: Bidenomics could sink Biden. Voters know the truth about prices,-0.1,0.3182,0.0
+FOX,Biden,Top Republican demands Biden admin block Iran minister's UN visit,-0.5,-0.2732,0.5
+FOX,Biden,Top Republican demands Biden admin block Iranian foreign minister's visit to UN: 'an insult' to victims,-0.5,-0.7717,0.1875
+FOX,Biden,Top Biden adviser ripped as Middle East claim resurfaces after Iran attack,-0.6,-0.3182,0.25
+FOX,Biden,Some business owners upset at Biden for granting work permits to new migrants: 'It's offensive',-0.7,-0.5106,0.13636363636363635
+FOX,Biden,"Experts warn over 'wobbly' US economy, Biden's economic 'lie'",-0.55,-0.1027,0.2
+FOX,Biden,"WH deems impeachment inquiry 'over,' President Biden formally declines to testify",-0.5,0.0,0.0
+FOX,Biden,"White House deems House impeachment inquiry 'over,' President Biden formally declines to testify",-0.65,0.0,0.0
+FOX,Biden,Biden never wanted Israel to have missile defense. Now he just wants them to stand down,0.0,0.128,0.022222222222222213
+FOX,Biden,"Biden chimes in as Caitlin Clark, WNBA salary debate rages",0.0,-0.4767,0.0
+FOX,Biden,"US economy is more 'wobbly' than it seems and Biden's 'lie' isn't helping, experts warn",0.0,-0.1511,0.5
+FOX,Biden,Biden’s moral equivalency between Israel and the Palestinians will result in failure — again,0.0,-0.5106,-0.15833333333333335
+FOX,Biden,Biden never wanted Israel to have missile defense,-1.0,0.128,0.0
+FOX,Biden,"Biden Posts About Female, Male Athletes Not Getting Paid The Same After Caitlin Clark's WNBA Deal Goes Viral",0.0,0.0,0.0
+FOX,Biden,Biden's past comment about niece's China role could haunt re-election campaign,0.0,-0.4019,-0.25
+FOX,Biden,Struggling economy has key voting demographic reportedly ditching Biden,0.0,-0.4215,0.0
+FOX,Biden,Biden admin shielding docs related to menthol cigarette crackdown: watchdog,0.0,0.0,0.0
+FOX,Biden,"Biden says inflation is top domestic priority, but Fed admits lack of progress",-0.3,0.6059,0.25
+FOX,Biden,Trial for ex-FBI informant accused of lying about Biden business ties delayed,0.0,-0.7579,0.0
+FOX,Biden,"Biden under fire as he shuts down US oil production, turns to socialist dictator: 'Wake the hell up'",0.0,-0.7906,-0.15555555555555559
+FOX,Biden,"Biden fires off post as Caitlin Clark, WNBA salary debate rages",0.0,-0.4767,0.0
+FOX,Biden,"Biden under fire as he shuts down US oil production, turns to socialist dictator",0.0,-0.34,-0.15555555555555559
+FOX,Biden,Biden takes action against China’s unfair practices to protect US steel and shipbuilding industries,0.0,-0.128,-0.2
+FOX,Biden,"Left-wing rabbi warns Biden, Democrats not to count on Jewish votes from the pulpit",0.0,-0.1027,0.0
+FOX,Biden,Bidenomics could sink Biden in 2024. Voters know the cost of everything has soared,0.0,0.0,0.0
+FOX,Biden,"Biden makes fiery statement about women's sports, debate of Caitlin Clark's WNBA salary",0.0,-0.34,0.0
+FOX,Trump,Judge scolds Trump over courtroom behavior: 'I won't tolerate that',0.0,0.0,0.0
+FOX,Trump,Trump trial resumes after dozens of potential jurors ousted for pointed admission,0.0,0.0,0.0
+FOX,Trump,"Trump's visit to working-class Pa. town evokes fond memories, businesses say: 'More money in our pockets'",0.0,0.4404,0.5
+FOX,Trump,Excused juror reveals selection process for Trump's hush money trial: 'Not a fan',0.0,-0.2411,0.0
+FOX,Trump,WATCH LIVE: Will Cain and Steven Bonnell II discuss Trump hush money trial,0.0,0.0,0.13636363636363635
+FOX,Trump,Stephen A. Smith trashes liberals for using trial against Trump,0.0,0.0,0.0
+FOX,Trump,MSNBC host praises 'DEI' officials prosecuting Trump: 'Wonderfully poetic',0.0,0.8074,0.375
+FOX,Trump,Stuart Varney: Liz Truss warned Trump the deep state is waiting,0.0,-0.2732,0.0
+FOX,Trump,"Trump says trial is having a 'reverse effect' as he campaigns, vows to save NYC",0.0,0.4939,0.0
+FOX,Trump,Lara Trump goes off on 'deranged' media pundits giddy over Trump trial,0.0,-0.1531,0.0
+FOX,Trump,Trump hush money trial is a 'Frankenstein case' that's been 'zapped' into life: Turley,0.0,0.0,0.0
+FOX,Trump,SEAN HANNITY: This is a political smear campaign against Trump,0.0,-0.3612,0.0
+FOX,Trump,Bill Maher knocks CNN's non-stop Trump bashing: 'No one's been harder on him than me… and I'm bored with it',0.0,-0.5106,-0.3
+FOX,Trump,Billionaire reveals how much he's paying in taxes this year after criticizing Trump tax cuts,0.0,-0.5719,0.2
+FOX,Trump,Manhattan DA asks judge to hold Trump in contempt of court,0.0,-0.5859,0.0
+FOX,Trump,Stephen A. Smith calls liberals cowards for lawfare against Trump: 'Scared you can't beat him',0.0,-0.4404,0.0
+FOX,Trump,Trump trial: Why can't Americans see or hear what is going on inside the courtroom?,0.0,0.0,0.0
+FOX,Trump,"Katie Couric blames 'anti-intellectualism,' 'class resentment' driving Trump's MAGA voters",-0.75,-0.6808,0.0
+FOX,Trump,Katie Couric ripped for 'cringeworthy' condescension toward Trump supporters,-0.75,0.4404,0.0
+FOX,Trump,Trump goes from court to campaign at a New York City bodega,0.0,0.0,0.13636363636363635
+FOX,Trump,"Trump's visit to working-class town evokes fond memories, businesses say",0.2,0.4404,0.0
+FOX,Trump,SCOTUS fears charge against Jan 6 defendant may have implications for Trump case,-0.4499,-0.4215,0.0
+FOX,Trump,"Trump risks losing key voter base with opposition to Arizona abortion law, pro-lifers say",-0.5,-0.5719,-0.4
+FOX,Trump,Manhattan DA asks judge to hold Trump in contempt of court — threatens jail time,0.0,-0.7506,-0.1
+FOX,Trump,Supreme Court to debate 'sleeper' case that could affect Trump federal prosecution,0.0,0.1027,0.0
+FOX,Trump,"HOWARD KURTZ: Prosecutors push salacious portrait of Trump, winning some",-0.301,0.5267,0.5
+FOX,Trump,Judge scolds Trump over courtroom behavior as first jurors picked,-0.3,0.0,0.25
+FOX,Trump,Trump media company preparing livestream content for Truth Social,0.0,0.3182,0.03333333333333333
+FOX,Trump,Trump says criminal trial is having a 'reverse effect' as he campaigns outside NYC store,0.0,-0.5267,-0.2
+FOX,Trump,LARRY KUDLOW: Donald Trump cut taxes and the entire economy benefited,0.3,-0.2732,0.0
+FOX,Trump,Katie Couric torched for 'cringeworthy' condescension toward Trump supporters reminiscent of Hillary,-0.6000000238418579,0.4404,0.0
+FOX,Trump,Bill Maher unloads to Katie Couric about CNN bashing Trump nonstop,-0.408,0.0,0.0
+FOX,Trump,"Just 35% of US adults say Trump broke the law in New York hush money case, poll finds",-0.25,-0.4215,0.13636363636363635
+FOX,Trump,MSNBC's Joy Reid praises 'DEI' prosecutor Alvin Bragg for taking on Trump,0.2,0.802,0.8
+FOX,Trump,GREG GUTFELD: Dems hate Trump so much that they're willing to destroy the legal system,-0.65,-0.7717,-0.07
+FOX,Trump,Katie Couric torched for 'cringeworthy' condescension toward Trump supporters,-0.5,0.4404,0.0
+FOX,Trump,"Trump should risk arrest and attend son's graduation, Piers Morgan says, force Dems into 'political suicide'",0.1,-0.8402,-0.025
+FOX,Trump,GREG GUTFELD: They’re twisting the law to prevent a second Trump term,-0.85,0.0258,0.0
+FOX,Trump,New York Times reporter declares Trump stared at her after she reported he fell asleep,-0.4,0.0,0.13636363636363635
+NBC,Biden,Biden to call for tripling tariffs on Chinese metals,-1.0,0.0,0.0
+NBC,Trump,Trump's lawyers and prosecutors spar over 'lock him up' posts and 2020 social media. Here's what you missed on trial Day 2.,0.0,-0.296,0.03333333333333333
+NBC,Trump,Speaker Mike Johnson's team briefed conservative influencers on his election bill before Trump meeting,0.314,0.0,0.0
+NBC,Trump,"Supreme Court questions obstruction charge against Jan. 6 rioter, which could impact Trump",0.3,0.5574,0.0
+NBC,Trump,Trump team and prosecution grapple with visceral opinions of the former president,0.0,-0.4939,0.0
+NBC,Trump,Trump's criminal trial continues with a hearing on his possible testimony,0.0,-0.5267,-0.2
+NBC,Trump,"New York v. Donald Trump, Day 1: From the Politics Desk",0.0,0.0,0.13636363636363635
+NBC,Trump,Trump's New York hush money trial continues after sleepy start to jury selection,0.0,0.0,0.13636363636363635
+NBC,Trump,"Supreme Court weighs Jan. 6 rioter's obstruction challenge, which could affect Trump's case",0.0,0.5994,0.0
+NBC,Trump,Trump's N.Y. hush money trial begins. Here's what you missed the first day.,0.0,-0.296,0.25
+NBC,Trump,Trump's lawyers and prosecutors spar over 2020 social media. Here's what you missed on trial Day 2.,0.0,-0.296,0.03333333333333333
+NBC,Trump,Lawyers press jurors about whether they can fairly judge Trump,0.4,0.0,0.7
+NBC,Trump,Lawyers scrutinize Trump's jury pool on second day of hush money trial,0.0,0.0,0.0
+NBC,Trump,Supreme Court questions obstruction charge against Jan. 6 rioter in case that could affect Trump,0.0,0.5574,0.0
+NBC,Trump,Trump's trial: A 'freak show' on the outside and solemn on the inside,0.0,-0.4939,0.0
+NBC,Trump,Trump's hush money trial continues with a hearing related to the former president's possible testimony,0.0,0.0,0.0
+NBC,Trump,Trump's trial: A 'freak show' outside and solemn inside,0.0,-0.4939,0.0
+NBC,Trump,Scrutiny is on jury selection as Trump returns to court in his criminal trial,0.0,-0.5267,-0.4
+NBC,Trump,Focus is on jury selection as Trump returns to court in his criminal trial,0.0,-0.5267,-0.4
+NBC,Trump,First jurors seated in hush money trial after drama over Facebook posts and Trump's behavior,0.0,0.0,0.25
+NBC,Trump,Judge admonishes Trump after he appears to speak during questioning of a prospective juror,-0.5,-0.1027,0.0
+NBC,Trump,Trump lawyers scrutinize prospective juror's social media posts,0.0,0.0,0.03333333333333333
+NBC,Trump,Scrutiny is on jury selection as Trump returns to court in his hush money trial,0.0,0.0,0.0

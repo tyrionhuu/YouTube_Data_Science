@@ -1,0 +1,40 @@
+channel,target,headline,sentiment_gemini,sentiment_vader,sentiment_textblob
+CNN,Biden,Biden administration announces focus on ‘flooding the zone’ with life-saving overdose reversal medicine,0.0,0.0,0.0
+CNN,Biden,Biden officials press health care giant to get emergency funding flowing to providers following cyberattack,0.0,0.1531,0.0
+CNN,Trump,House passes bill that could ban TikTok despite resistance from Trump,0.0,-0.5574,0.0
+CNN,Trump,Trump calls Facebook the enemy of the people. Meta’s stock sinks,0.0,-0.5423,-0.1
+CNN,Trump,Trump’s delaying strategy is working so far,0.0,0.0,0.1
+CNN,Trump,UK court orders Trump to pay legal fees of company he sued over controversial Russia dossier,0.0,-0.1779,0.375
+CNN,Trump,Judge dismisses some Trump Georgia election subversion charges\xa0but leaves most of the case intact,0.0,0.2023,0.5
+CNN,Trump,Judge to consider arguments that Trump could keep any document he wanted,0.0,-0.4019,0.0
+CNN,Trump,Trump and young progressives in unlikely alignment on opposition to TikTok ban,0.0,-0.5574,-0.2
+CNN,Trump,A win in Georgia. Back to court in Florida. Here’s where Trump’s legal cases stand,0.0,0.6486,0.3333333333333333
+CNN,Trump,These Trump allies voted ‘no’ on the TikTok ban. Was it because of him?,0.0,-0.5574,0.0
+FOX,Biden,GOP rep says he helped rescue Americans trapped in Haiti: Mission proves Biden's 'pattern of abandonment',0.0,-0.5423,0.04999999999999999
+FOX,Biden,Hunter Biden's ex-business partner pitches perfect idea to see who is telling the truth,0.0,0.7184,1.0
+FOX,Biden,Cookie Monster has a better grasp on the economy than Joe Biden,0.0,0.4404,0.5
+FOX,Biden,Hunter Biden's ex-business partner slams him for not appearing at House hearing,0.0,0.0,0.0
+FOX,Biden,"Congress poised to roll back 'veteran gun ban,' with reluctant Biden backing",0.0,-0.3182,0.0
+FOX,Biden,"Biden’s new energy-saving standards for washing machines and dryers are ‘harmful,’ expert warns",0.0,-0.1027,0.13636363636363635
+FOX,Biden,4 money lies told at the State of the Union and why the middle class isn't buying Bidenomics,-0.6,-0.4215,0.0
+FOX,Biden,Energy expert sounds alarm over Biden's new rules for washers and dryers,-0.65,-0.0772,0.13636363636363635
+FOX,Biden,Hunter Biden's former business partner pitches perfect idea to see who is telling the truth,0.0,0.7184,0.5
+FOX,Biden,"JESSE WATTERS: If TikTok is a national security threat, why does Biden use it?",0.0,-0.25,0.0
+FOX,Trump,Attorney warns what could be the result of judge pulling DA Willis from Trump case,-0.5,-0.1027,0.0
+FOX,Trump,CNN legal expert trashes Willis’ ‘screw ups’ after judge tosses six charges against Trump,-0.6,-0.1531,0.2
+FOX,Trump,The issue that could cost Trump the 2024 campaign,-0.7,0.0,0.0
+FOX,Trump,"Trump's presidency made it possible for Aaron Rodgers to be in VP discussion, columnist says",0.25,0.0,0.0
+FOX,Trump,"FDNY reverses course on 'hunt' for firefighters who booed Letitia James, cheered Donald Trump",0.15,0.5106,0.0
+FOX,Trump,"Aaron Rodgers has Trump to thank for being in VP talks, columnist says",-0.3,0.3612,0.0
+FOX,Trump,Morning Glory: Trump's big chance to put this election away now,0.8,0.6705,0.0
+FOX,Trump,"As ruling on DA Willis looms in Trump case, defense sources say 'the court is being played'",-0.3,0.3182,0.0
+FOX,Trump,HUGH HEWITT: Trump has one big chance to put this election away right now,0.7,0.25,0.14285714285714285
+FOX,Trump,"FDNY alters narrative on 'hunt' for members who booed Dem AG, repeatedly chanted for Trump",-0.8,0.0,0.0
+FOX,Trump,Witness testimony under oath about Trump refuted completely by new report,-0.3,0.0,0.13636363636363635
+NBC,Biden,Hunter Biden rejects House Republicans' request to testify publicly,-0.2,-0.4939,0.0
+NBC,Biden,Hunter Biden gun case gets tentative trial date of June 3,0.0,-0.34,0.0
+NBC,Biden,"Housing Secretary Marcia Fudge is stepping down, the second Biden Cabinet member to leave",-0.3,-0.0516,-0.07777777777777779
+NBC,Trump,CEO of the insurance company that backed Trump bond in Carroll case defends issuing policy,0.0,0.0258,0.0
+NBC,Trump,Live updates: Trump to attend Florida classified documents hearing seeking dismissal of charges,0.0,-0.2732,0.13636363636363635
+NBC,Trump,Latino evangelical support for Christian nationalism rises as Trump courts religious vote,0.2,0.4019,0.0
+NBC,Trump,Trump lawyers to argue Florida judge should dismiss classified documents case,0.0,-0.34,0.0

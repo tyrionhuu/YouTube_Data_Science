@@ -1,0 +1,187 @@
+channel,target,headline,sentiment_gemini,sentiment_vader,sentiment_textblob
+CNN,Biden,Fictional presidents offer Biden advice for his big speech,0.0,0.0,0.0
+CNN,Biden,See Biden’s reaction to fictional presidents’ advice,0.0,0.0,0.0
+CNN,Biden,Biden gave the speech of his life,0.0,0.0,0.0
+CNN,Biden,Voters who flipped key state reveal how they feel about Biden now,0.0,0.0,0.0
+CNN,Biden,Voters who flipped key county reveal how they feel about Biden now,0.0,0.0,0.0
+CNN,Biden,"Katie Britt, youngest ever GOP woman elected to the US Senate, to deliver party’s response to Biden’s State of the Union",0.6,0.0,0.0
+CNN,Biden,"Biden will win Hawaii Democratic caucuses, CNN projects",0.0,0.5859,0.8
+CNN,Biden,"Marjorie Taylor Greene interrupts Biden, demanding he name Laken Riley",-1.0,-0.4939,0.0
+CNN,Biden,Fact checking Biden’s State of the Union,0.0,0.0,0.0
+CNN,Biden,Axelrod says this is what Biden needs to do during his State of the Union speech to appeal to voters,0.0,0.0,0.0
+CNN,Biden,Biden kicks off speech with a stern message to Putin,0.4,0.0,0.0
+CNN,Biden,Tracking State of the Union topics: See what Biden covered in his speech,0.0,0.0,0.0
+CNN,Biden,Alabama Sen. Katie Britt says ‘the American dream has turned into a nightmare’ in GOP rebuttal to Biden’s State of the Union,-0.65,0.25,0.0
+CNN,Biden,"US will build a temporary pier to deliver aid to Gaza, Biden says",0.0,0.0,0.0
+CNN,Biden,Democrats breathe some relief and say tonight proves Biden’s got ‘gas left in the tank’,0.5,0.4767,0.15
+CNN,Biden,GOP senator says ‘that’s true’ in agreement with Biden on border deal,0.2,0.4939,0.35
+CNN,Biden,What to watch in Biden’s 2024 State of the Union address,0.0,0.0,0.0
+CNN,Biden,Americans’ discontent has been weighing Biden down in the polls. He’ll use this address to try to sway his critics.,-0.3,-0.296,-0.15555555555555559
+CNN,Biden,Hear Biden’s message on Gaza to Israeli government,0.0,0.0,0.0
+CNN,Biden,Why Biden’s guest list is key for his State of the Union speech,0.0,0.0,0.0
+CNN,Biden,Biden’s allies beg him to fight harder. State of the Union is his chance,0.0,-0.1531,-0.1
+CNN,Biden,A Black man’s view on what Biden should do for the White working class,0.0,0.0,-0.08333333333333333
+CNN,Biden,"In his State of the Union speech, US President Biden is going where he long resisted",0.0,0.0,-0.05
+CNN,Biden,Axelrod on what Biden needs to do during SOTU to appeal to voters,0.0,0.0,0.0
+CNN,Biden,Biden projects a vision of strength that’s been missing from his presidency but will be needed in 2024 campaign,0.5,0.25,-0.2
+CNN,Biden,Jill Biden’s State of the Union guest list offers a blueprint for president’s address,0.0,0.0,0.1
+CNN,Biden,Democrats say tonight proves Biden’s got ‘gas left in the tank’,0.625,0.0,0.15
+CNN,Trump,"Trump claims 325,000 migrants ‘were flown in from parts unknown’",-0.5,0.0,-0.1
+CNN,Trump,Haberman: This is what worries Trump’s camp today,-0.3,-0.4215,0.0
+CNN,Trump,"Fact Check: Trump claims 325,000 migrants ‘were flown in from parts unknown’",0.239,0.0,-0.1
+CNN,Trump,Trump attorneys accuse Manhattan DA of waging a ‘fantasy’ case against Trump,-0.3,-0.2023,0.0
+CNN,Trump,"The president will take a swipe at Trump, vow to restore Roe and acknowledge his age, excerpts from his State of the Union show",-0.1,0.296,0.0
+CNN,Trump,Donald Trump has to raise a half billion dollars in a hurry,-0.434992053478241,0.0,-0.16666666666666666
+CNN,Trump,"Rihanna, Mark Zuckerberg and Ivanka Trump among bevy of stars at Indian billionaire heir’s pre-wedding bash",0.0,0.0,0.0
+CNN,Trump,The president’s forceful speech was often ad-libbed and he repeatedly attacked Trump. Here’s what happened.,0.0,-0.4588,0.0
+CNN,Trump,Supreme Court sets argument date in Trump immunity case for April 25,0.0,0.2732,0.0
+CNN,Trump,Judge in Trump’s NY criminal case will limit access to juror information over safety concerns,0.0,-0.1531,-0.4
+CNN,Trump,Trump allies visit Israel as former president offers few details on how he’d approach Gaza conflict,0.0,-0.3182,-0.03333333333333333
+CNN,Trump,US special counsel asks judge to label Trump’s immunity claim in classified documents as ‘frivolous’,-0.5,0.4019,0.35714285714285715
+CNN,Trump,Why Donald Trump’s Super Tuesday win is a defeat for Rupert Murdoch,-0.8,0.6908,0.5666666666666667
+FOX,Biden,Alabama Sen. Britt shreds Biden on ‘despicable’ border crisis in Republican rebuttal,-1.0,-0.6249,0.0
+FOX,Biden,Biden plans to use State of the Union to stress ‘historic achievements’ of his admin,0.49,-0.4215,0.0
+FOX,Biden,George Santos back on Capitol Hill for Biden State of the Union,0.0,0.0,0.0
+FOX,Biden,Forget gas stoves. The big\xa0polluter is in\xa0Biden’s backyard,-0.75,-0.2263,0.0
+FOX,Biden,"Veteran anchor dismisses own network's polling, makes bold claim about Biden",-0.5,0.3818,0.3111111111111111
+FOX,Biden,Democrats urge Biden to see 'warning sign' after voters abandon him: 'Not something that should be ignored',-0.7,-0.765,0.0
+FOX,Biden,Biden immigration situation grows even more frustrating with secret flights: Tomi Lahren,-0.5,-0.4927,-0.10000000000000002
+FOX,Biden,Biden to have US military build a port in Gaza,0.0,0.0,-0.1
+FOX,Biden,Biden will direct US military to build Gaza port to increase flow of aid,0.1,0.3182,0.0
+FOX,Biden,GOP lawmakers say SOTU confirmed worries about Biden's mental acuity,-0.5,-0.4215,0.15000000000000002
+FOX,Biden,Biden gave 'speech of his life' at SOTU. Here are 3 things he did right and 3 things he got wrong,0.2,-0.4767,-0.10714285714285715
+FOX,Biden,Biden's State of the Union answered one big question,0.0,0.0,0.0
+FOX,Biden,Biden adviser fires back after president called the 'second coming of FDR' without the results,-0.3,0.0,0.0
+FOX,Biden,Pro-Palestinian protesters tried to block Biden's path to the Capitol for State of the Union,-1.0,-0.5859,0.0
+FOX,Biden,Biden caught making joke after State of the Union speech that has critics fuming,-0.87,-0.5719,0.0
+FOX,Biden,Biden has already broken at least one record with tonight's State of the Union address,0.0,-0.4767,-0.35
+FOX,Biden,Pro-Palestinian protesters sought to disrupt Biden's path to Capitol for State of the Union,-0.2,-0.2263,0.0
+FOX,Biden,Republicans and Democrats share the one thing Biden needs to talk about at SOTU,0.0,0.296,0.0
+FOX,Biden,Biden slams his 2024 rival multiple times during address — without actually naming him,-0.6,0.0,0.0
+FOX,Biden,Alabama Sen. Britt shreds Biden for ‘despicable’ border crisis in Republican rebuttal,-0.5,-0.6249,0.0
+FOX,Biden,Pro-Palestinian protesters attempt to disrupt Biden's State of the Union address,-0.5,-0.2263,0.0
+FOX,Biden,Gold Star mom surprises CNN anchor after revealing Biden hasn't reached out to her family,0.5,0.1541,0.0
+FOX,Biden,Biden invokes Laken Riley: ‘Innocent young woman who was killed by an illegal — that’s right’,0.0,-0.8442,0.03714285714285713
+FOX,Biden,Biden mentions Laken Riley after urging from GOP: ‘Young woman who was killed by an illegal’,0.0,-0.6705,-0.19999999999999998
+FOX,Biden,Biden stumbling into critical State of the Union as approval ratings plummet,-0.9,0.2023,0.0
+FOX,Biden,"Prices of eggs, milk, steak have gone up since Biden took office",-1.0,0.0,0.0
+FOX,Biden,Biden ripped for video with actors who played presidents giving pointers for State of the Union: 'Pathetic',0.0,0.5859,-1.0
+FOX,Biden,"Biden, in State of the Union,  to call for wealth tax and higher taxes on businesses",0.0,0.4939,0.25
+FOX,Biden,Biden planning to tout economic agenda in State of the Union,0.0,-0.128,0.2
+FOX,Biden,Biden’s food drop in\xa0Gaza\xa0masks a radical pro-Palestinian agenda,-0.7,-0.2732,0.0
+FOX,Biden,"LAURA: In a few hours, the media will be lavishing praise on Biden",0.0,0.5574,-0.2
+FOX,Biden,"Shoppers punished by soaring prices of eggs, milk as Biden cheers the economy",-0.5,0.0258,0.0
+FOX,Biden,HAPPENING NOW: President Biden delivers high-stakes State of the Union address to the nation,0.0,0.0,0.0
+FOX,Biden,"How It Started vs. How It's Going: Prices of eggs, milk, steak up since Biden took office",0.0,0.0,0.0
+FOX,Biden,Christian university says Biden admin probe 'used different standard' after record fine,0.0,0.2023,0.10416666666666667
+FOX,Biden,Biden adviser fires back after president called the 'second coming of FDR',0.0,0.0,0.0
+FOX,Biden,Biden gets tips for SOTU speech from Hollywood actors who played presidents,0.0,0.34,0.0
+FOX,Biden,"Biden regulations, expired tax incentives weigh on manufacturers",-0.5,0.3182,0.0
+FOX,Biden,WATCH LIVE: Biden preps for tonight's critical State of the Union as approval ratings drop,0.0,-0.0772,0.06818181818181818
+FOX,Biden,How Americans could win big on Biden gaffes during tonight's high-stakes State of the Union,0.0,0.5859,0.4
+FOX,Biden,Ex-Rep. George Santos returns to Capitol Hill for Biden’s State of the Union address,0.0,0.0,0.0
+FOX,Biden,'Speech of his life': Here are 3 things Biden did right and 3 things he got wrong,0.0,-0.4767,-0.10714285714285715
+FOX,Biden,Anchor rattled after Gold Star mom admits Biden hasn't returned message,0.0,0.296,0.0
+FOX,Biden,"Andrea Mitchell dismisses own network's polling, makes bold claim about Biden",0.0,0.3818,0.4666666666666667
+FOX,Biden,MSNBC's Chris Hayes hits Biden for not laying out second term 'vision': 'I can’t really tell you' what it is,0.0,0.0,0.1
+FOX,Biden,HOT MIC: Biden caught making joke after SOTU speech that has critics fuming,0.0,-0.5719,0.25
+FOX,Biden,Man conceived in rape to challenge Dems on abortion at Biden’s SOTU address,0.0,-0.6597,0.0
+FOX,Biden,Biden's State of the Union speech answered one big question,0.0,0.0,0.0
+FOX,Biden,JESSE WATTERS: Biden is probably the worst orator in modern times,0.0,-0.6249,-0.4
+FOX,Biden,Christian university says Biden admin probe 'used different standard' after $14M fine,0.0,0.2023,0.10416666666666667
+FOX,Biden,Biden uses term for illegal immigrants during speech that his own admin warned against,0.0,-0.6908,0.04999999999999999
+FOX,Biden,Bill Maher calls Biden 'selfish' for running in 2024: Dems would win 'without doubt' if he dropped out,0.0,0.7105,0.15000000000000002
+FOX,Biden,Conservatives blast Biden’s State of the Union as ‘nakedly partisan’ campaign speech,0.0,0.0,0.0
+FOX,Biden,Gold Star mom surprises anchor after revealing Biden hasn’t reached out to her family,0.0,0.3182,0.0
+FOX,Biden,"Anchor writes off her network's polling, makes surprising claim about Biden's election odds",0.0,0.2732,0.7
+FOX,Biden,"Bill Maher calls Biden 'selfish' for running in 2024, says Dems would win if he dropped out",0.0,0.5859,0.15000000000000002
+FOX,Biden,Biden's SOTU just proved his entire presidency is based on one word,-0.5,0.0,0.0
+FOX,Biden,Conservative group launches SOTU ad slamming Biden for Laken Riley's death,0.0,-0.5994,0.0
+FOX,Biden,"LARRY KUDLOW: Under Joe Biden, the American condition looks unhappy",-1.0,-0.4215,-0.3
+FOX,Biden,"Migrant at border wears Biden-Harris shirt, claims not to know who they are",-1.0,0.0,0.0
+FOX,Biden,Woke Biden official who tried to ban World War II kissing photo has controversial history,0.0,-0.6808,0.55
+FOX,Biden,WATCH LIVE: All eyes on Biden ahead of tonight's critical State of the Union address,0.0,-0.3182,0.06818181818181818
+FOX,Biden,25 states sue over EPA soot pollution rule: 'Biden’s radical green agenda',-0.5,0.0,-0.2
+FOX,Biden,Dems making headlines by voting ‘uncommitted’ over Biden,-0.1,0.0,0.0
+FOX,Biden,Biden mocked over 'pathetic' video of him talking to actors who have played presidents,-0.9,0.0258,-1.0
+FOX,Biden,"Jason Palmer, Baltimore investor who defeated Biden in American Samoa, wants to debate",0.0,-0.4767,0.1
+FOX,Biden,House Speaker Johnson explains Biden’s flub at beginning of State of the Union,0.0,0.0,0.0
+FOX,Biden,Lawmakers share the one thing Biden needs to talk about Thursday night,0.0,0.296,0.0
+FOX,Biden,Biden repeats claim about deficit that has been fact-checked and labeled false,-0.8,-0.4019,-0.4000000000000001
+FOX,Biden,Did Biden pass or fail? Former presidential speechwriters grade the State of the Union address,0.0,-0.5423,-0.25
+FOX,Biden,Santos spotted on Capitol Hill for Biden’s address after being ousted from Congress,-0.2,0.0,0.0
+FOX,Biden,Member of Biden’s Cabinet will be taken out of DC tonight as part of Cold War-era tradition,0.0,0.0,-0.6
+FOX,Biden,'Lincoln Riley': Biden ridiculed for appearing to flub slain Georgia student's name,-0.5,-0.3612,0.0
+FOX,Biden,"Americans can place bets on Biden gaffes, mix-ups and more during address to nation",-0.3,0.0,0.5
+FOX,Biden,SEAN HANNITY: 2024 is a choice between safe and secure borders or Joe Biden's open borders agenda,0.0,0.6486,0.3
+FOX,Biden,Dems quietly 'nervous' about Biden's performance at State of the Union,-0.6,0.0,0.0
+FOX,Biden,WATCH: Biden caught on hot mic joking about being ‘cognitively impaired’,-0.7,0.2263,0.25
+FOX,Biden,SEAN HANNITY: Biden's State of the Union was a 'DNC political speech',-0.2,0.0,0.0
+FOX,Biden,Preview Sen. Britt’s Republican response to Biden’s State of the Union address,0.0,0.0,0.0
+FOX,Biden,Biden heads into SOTU with dismal approval ratings as he battles 1 major issue that's taken center stage,-0.5,-0.5423,-0.018750000000000003
+FOX,Biden,"SEAN HANNITY: 'Angry, bitter, screaming' Biden gave 'extreme' campaign speech, Cruz says",-0.7,-0.6597,-0.24166666666666667
+FOX,Biden,WATCH: Illegal migrant at US border explains why he's wearing Biden-Harris shirt,-0.5,-0.5574,-0.5
+FOX,Biden,In State of the Union speech Biden showed America his entire presidency is based on one word,-1.0,0.0,0.0
+FOX,Trump,Federal judge issues ruling on Trump payment in defamation case,0.0,0.0,0.0
+FOX,Trump,Charles Barkley rants about Black people wearing Donald Trump mugshot shirts again: 'Freaking idiot',-0.6,-0.8126,-0.48333333333333334
+FOX,Trump,CNN panelist hammers MSNBC hosts mocking voters' border concerns: 'In-kind contribution' to Trump,0.0,-0.4019,0.0
+FOX,Trump,NBA legend again calls out Black people who wear Trump mugshot merch,-1.0,0.0,-0.16666666666666666
+FOX,Trump,New York attorney general tells crowd to ‘simmer down’ as Trump chants drown her out at FDNY ceremony,-0.2,-0.5719,0.010269360269360261
+FOX,Trump,Sunny Hostin wears 'funeral chic' to mourn Trump's Super Tuesday victory: 'So devastated',-0.6,-0.2006,0.3333333333333333
+FOX,Trump,Trump has suggested a workable and novel way to help Ukraine. Let's consider it,0.5,0.6124,0.0
+FOX,Trump,Unanimous Supreme Court in Trump case tells us this about our legal elites,0.2,0.6249,0.2
+FOX,Trump,Jurors in Trump's hush money criminal trial to be anonymous,0.0,-0.5267,-0.4
+FOX,Trump,Unanimous Supreme Court in Colorado vs. Trump tells us this about our legal elites,0.28,0.6249,0.2
+FOX,Trump,DeSantis criticizes Haley for not endorsing Trump: 'You signed the pledge',-0.5,-0.34,0.0
+FOX,Trump,Liberal pundits refuse to accept polling showing Trump attracting Black vote,-0.5,0.5423,-0.16666666666666666
+FOX,Trump,Senate GOP candidate blasted for alleged scheduled meeting with anti-Trump group,-0.3,0.0,-0.35
+FOX,Trump,LAURA INGRAHAM: The Trump slayers have fallen by the wayside,-0.1,-0.3612,0.0
+FOX,Trump,Federal judge issues ruling on Trump payment in defamation case against E. Jean Carroll,0.0,0.0,0.0
+FOX,Trump,Ohio GOP Sen candidate blasted for alleged scheduled meeting with anti-Trump group,-0.6,0.0,-0.35
+FOX,Trump,"Fani Willis' removal would not end Trump's Georgia prosecution, Trey Gowdy warns",-0.3,-0.5574,0.0
+FOX,Trump,New York AG scolds crowd as Trump chants drown her out at FDNY ceremony,-0.25,-0.5719,0.13636363636363635
+FOX,Trump,HUGH HEWITT: Trump's legal cases could help him return to the White House,0.2,0.4939,0.1
+NBC,Biden,"Gaza aid not a 'bargaining chip,' Biden warns Israel as he unveils plan for temporary port",0.0,-0.1027,0.0
+NBC,Biden,Biden turns the State of the Union into a fiery campaign stump speech: From the Politics Desk,-0.5,-0.34,0.0
+NBC,Biden,State of the Union 2024 live updates: Biden will vow to restore abortion rights and promote democracy,0.5,0.5859,0.13636363636363635
+NBC,Biden,Biden turns the State of the Union into a spirited campaign stump speech: From the Politics Desk,-0.78,0.3182,0.5
+NBC,Biden,"Biden touts falling inflation rates, rising wages and job growth",0.6,0.2263,0.0
+NBC,Biden,Biden to announce more direct assistance in Gaza as he lays out second-term vision in State of the Union,0.0,0.25,0.3
+NBC,Biden,Biden to announce U.S.-led mission to establish a port for aid on Gaza's coast,0.0,0.0,0.0
+NBC,Biden,Biden's big entrance: All 9 minutes of the president  greeting people,0.0,0.3818,0.0
+NBC,Biden,State of the Union 2024 live updates: Biden to announce a new Gaza port for aid in tonight's speech,0.2,0.0,0.13636363636363635
+NBC,Biden,"Gaza aid not a 'bargaining chip,' Biden warns Israel as U.S. and allies launch maritime corridor",0.0,-0.1027,0.0
+NBC,Biden,"State of the Union 2024 live updates: Biden will vow to restore abortion rights, promote democracy",0.5,0.5859,0.13636363636363635
+NBC,Biden,State of the Union 2024 live updates: Biden to announce Gaza port construction in address to Congress tonight,0.0,0.0,0.13636363636363635
+NBC,Biden,State of the Union live updates: President Joe Biden to address Congress tonight,0.0,0.0,0.13636363636363635
+NBC,Biden,Graphic: Tracking Biden’s topics at the State of the Union,0.0,0.0,0.0
+NBC,Biden,Biden's State of the Union and bill threatening to ban TikTok advances: Morning Rundown,0.0,-0.7906,0.0
+NBC,Biden,What to expect from Biden's election-year State of the Union,0.0,0.0,0.0
+NBC,Biden,Biden stares down questions about his age and fitness for office with spirited speech,0.0,0.5267,0.17222222222222222
+NBC,Biden,Biden banters with GOP hecklers over proposed cuts to Social Security,0.0,0.0516,0.03333333333333333
+NBC,Biden,State of the Union 2024 live updates: Biden will vow to restore Roe v. Wade abortion rights,0.0,0.296,0.13636363636363635
+NBC,Biden,Five key takeaways from Biden's final State of the Union before the 2024 election,0.0,0.0,0.0
+NBC,Biden,Biden admonishes the Supreme Court for overturning Roe v. Wade,0.0,0.5574,0.0
+NBC,Biden,Democrats invite women affected by abortion and IVF rulings to Biden’s State of the Union,0.0,0.0,0.0
+NBC,Biden,Biden to focus on 'freedom' in State of the Union — a central theme of his re-election campaign,0.0,0.0,0.0
+NBC,Biden,Biden to announce U.S. will construct port in Gaza in State of the Union,0.0,0.0,0.0
+NBC,Biden,State of the Union 2024 live updates: Biden to announce Gaza port construction in speech to Congress tonight,0.0,0.0,0.13636363636363635
+NBC,Biden,Biden portrays nation on the upswing in energized State of the Union,0.0,0.5106,0.0
+NBC,Biden,"Biden to address economy, abortion and Gaza as he makes case for second term",0.0,0.0,0.0
+NBC,Biden,State of the Union live updates: Biden to announce Gaza port construction in address to Congress tonight,0.0,0.0,0.13636363636363635
+NBC,Biden,Biden makes a pitch to working families and promises to protect safety net,0.0,0.7906,0.0
+NBC,Biden,Biden delivers a high-stakes address as he makes his case for a second term,0.0,0.0,0.0
+NBC,Biden,Biden to focus on 'freedom' — a central theme of his re-election campaign,0.0,0.0,0.0
+NBC,Biden,Why Biden is making ‘freedom’ a central campaign focus: From the Politics Desk,0.0,0.0,0.0
+NBC,Biden,Biden turns on charm and confronts GOP hecklers; Sen. Katie Britt delivers intense response,0.0,0.2732,0.2
+NBC,Biden,House Republicans set date for public testimony from Hunter Biden,0.0,0.0,0.0
+NBC,Biden,'A clarion call': Democratic donors sound the alarm to Biden about strength of 'uncommitted',0.0,0.2023,0.4
+NBC,Biden,Biden to begin laying out second-term vision in State of the Union,0.0,0.25,0.0
+NBC,Biden,Democrats invite women impacted by abortion and IVF rulings to Biden’s State of the Union,0.0,0.1531,0.0
+NBC,Biden,State of the Union 2024 live updates: Biden to announce a new Gaza port for aid in speech tonight,0.0,0.0,0.13636363636363635
+NBC,Trump,Trump to get intelligence briefings despite classified documents criminal trial,0.0,0.7074,-0.4
+NBC,Trump,Judge denies Trump's request for more time to pay damages in Carroll defamation case,0.0,-0.7479,0.5
+NBC,Trump,Trump co-defendant's lawyer presents argument for disqualifying Fani Willis to Georgia state senators,0.0,-0.3612,0.0
+NBC,Trump,Judge restricts access to jurors’ identities in Trump hush money trial,0.0,-0.3182,0.0
+NBC,Trump,Trump allies on the Republican National Committee want to help pay his legal bills,0.0,0.4767,0.2
+NBC,Trump,‘Done deal’: Allies say Trump aide Brian Jack would be favorite in Georgia congressional race,0.0,0.4588,0.5

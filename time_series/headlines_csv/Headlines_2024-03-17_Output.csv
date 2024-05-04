@@ -1,0 +1,59 @@
+channel,target,headline,sentiment_gemini,sentiment_vader,sentiment_textblob
+CNN,Biden,The former president keeps talking about Jan. 6 and his aides aren’t stopping him. Biden is pouncing on that.,-0.5,-0.1531,0.0
+CNN,Trump,Trump suggests ‘it’s going to be a bloodbath’ if he loses election,-0.8,-0.3182,-0.3
+CNN,Trump,Georgia prosecutor in Trump election case resigns,0.0,-0.3182,0.0
+CNN,Trump,Trump warns of ‘bloodbath’ for auto industry and country if he loses the election,-0.5,-0.4019,-0.3
+CNN,Trump,Trump visits Ohio ahead of competitive Senate primary with huge stakes for November,0.0,0.4588,0.4
+CNN,Trump,Trump keeps talking about Jan. 6 and his aides aren’t really trying to stop him,0.0,-0.3535,0.2
+CNN,Trump,Judge delays Trump hush money trial in New York,-0.2,0.0,0.13636363636363635
+CNN,Trump,‘Everything he is saying isn’t true’: Congolese governments denounce Trump’s baseless stories about emptied prisons,-0.6,-0.4767,0.35
+CNN,Trump,Live Updates: Congressional GOP eager to give Trump more January 6 fodder,-0.5,0.3612,0.3181818181818182
+CNN,Trump,Pence says he ‘cannot in good conscience’ endorse Trump,-0.7,0.6369,0.7
+CNN,Trump,Trump heads to Ohio ahead of Senate primary with huge stakes for November,0.0,0.3182,0.4
+CNN,Trump,These former Trump officials say he shouldn’t be president again,-0.2,0.0,0.0
+CNN,Trump,See Trump’s busy legal and election calendar in 1 chart,0.0,0.128,0.15000000000000002
+CNN,Trump,Live Updates: Trump-backed Senate candidate urges Ohioans to rid state of ‘RINO establishment’ by nominating him Tuesday,-0.2,0.0,0.13636363636363635
+CNN,Trump,Live Updates: Trump suggests ‘it’s going to be a bloodbath’ if he loses election,-0.7,-0.3182,-0.08181818181818182
+CNN,Trump,Trump heads to Ohio ahead of competitive Senate primary with huge stakes for November,0.146,0.4588,0.4
+FOX,Biden,"Joe Rogan goes after one of the biggest problems in the Biden admin, slams 'ridiculous' KJP",0.0,-0.4019,-0.3333333333333333
+FOX,Biden,"Biden, trans activists seize on death of 'non-binary' Oklahoma teen",0.0,-0.5994,0.0
+FOX,Biden,"Florida 'assets in place' to rebuff potential Haitian surge, as DeSantis expects Biden won't act",0.0,0.1779,0.0
+FOX,Biden,"Biden wants 50,000 new climate activists and the consequences will be devastating",0.0,-0.6486,-0.2212121212121212
+FOX,Biden,VP Harris urged to leave Biden ticket after ‘disappointing’ performance,-0.9,-0.0516,-0.6
+FOX,Biden,"Florida braces for potential Haitian surge, as DeSantis expects Biden won't act",-0.2,0.0,0.0
+FOX,Biden,Biden admin looks to crack down on fast food ice cream machines,0.0,0.0,0.022222222222222213
+FOX,Biden,"Swing state voter blames Biden for inflation, 'not buying' pandemic excuse in 2024: Prices 'still going up'",0.0,-0.4445,-0.05
+FOX,Biden,"Biden, trans activists seize on death of 'non-binary' Oklahoma 16-year-old Nex Benedict",0.0,-0.5994,0.0
+FOX,Trump,SEE IT: FDNY commissioner gets brutal reception at parade after Trump controversy,0.0,-0.6249,-0.5625
+FOX,Trump,Republican Senate candidate sends message to members of his party who ‘don’t like’ Trump,0.0,0.4019,0.0
+FOX,Trump,WATCH LIVE: Judge tells Willis to step aside or remove special prosecutor in Trump case,0.0,0.4019,0.24675324675324675
+FOX,Trump,"If Trump wants to win, here’s what he needs to do",0.0,0.5859,0.5
+FOX,Trump,SEAN HANNITY: Trump prosecutor Fani Willis threw 'lover' Nathan Wade 'under the bus',0.0,0.0,0.0
+FOX,Trump,SEE IT: Protesters jeer FDNY commissioner during St. Patrick’s Day parade after Trump controversy,0.0,-0.2263,-0.25
+FOX,Trump,SEE IT: Protesters jeer FDNY leader during St. Patrick’s Day parade after Trump controversy,0.0,-0.2263,-0.25
+FOX,Trump,WATCH LIVE: Trump rallies supporters in Ohio after busy week of court rulings,0.0,0.4404,0.11818181818181818
+FOX,Trump,"NCAA's eye-opening confession, the issue that could cost Trump a 2024 win, and more from Fox News Opinion",0.0,0.5859,0.65
+FOX,Trump,Trump faces off against GOP establishment as he parachutes into contentious Republican Senate primary,0.0,-0.296,0.4
+FOX,Trump,"Rachel Stuhlmann Returns To Her Tennis Influencing Roots, Sammy Sosa Checks In & Trump Vs. Cart Girl",0.0,0.0,0.0
+FOX,Trump,Legal analyst warns Fani Willis' case against Trump is 'going nowhere',0.0,0.0258,0.2
+FOX,Trump,"Rep. Nancy Mace spars with Bill Maher, explains her shift towards Trump",0.0,0.0,0.0
+FOX,Trump,"Fani Willis’ ‘sordid scandal’ could make it hard to find a jury in the Trump case, experts say",0.0,-0.1027,-0.2916666666666667
+FOX,Trump,Experts say DA Fani Willis' 'illicit affair' with prosecutor could hamper her case against Trump,0.0,0.0,0.0
+FOX,Trump,Experts say DA Fani Willis’ ‘illicit affair’ with prosecutor could hamper her Trump case,0.0,0.0,0.0
+FOX,Trump,Ohio Republican US Senate candidate Bernie Moreno has special message for GOP members who 'don't like' Trump,0.0,0.1506,0.35714285714285715
+FOX,Trump,"WATCH LIVE: Trump holds rally in Ohio, police take suspected gunman into custody",0.369,-0.2263,0.13636363636363635
+FOX,Trump,Jeffrey Toobin warns Fani Willis' case against Trump is 'going nowhere',-0.6,-0.1027,0.0
+FOX,Trump,Trump takes on GOP establishment with major endorsement in Senate primary,0.6,0.3182,0.23125
+FOX,Trump,Trump previews the ‘very first actions’ he would take in second term as president,0.2,0.0,0.1625
+NBC,Biden,White House weighs how to respond if Israel defies Biden with Rafah invasion,-0.1,0.0,0.0
+NBC,Biden,New Hampshire voters sue Biden deepfake robocall creators,-0.1,0.0,0.13636363636363635
+NBC,Biden,Israel-Hamas war live updates: Netanyahu's planned offensive on Rafah ratchets up tensions with Biden,-0.0625,-0.8625,0.13636363636363635
+NBC,Biden,Netanyahu's planned offensive on Rafah ratchets up tensions with Biden,-0.4,-0.6908,0.0
+NBC,Biden,Biden and Democratic Party organizations raised $53 million in February,0.0,0.4019,0.0
+NBC,Trump,Trump adviser Peter Navarro asks Supreme Court to keep him out of prison,0.0,0.0772,0.0
+NBC,Trump,Trump plays attack dog for Bernie Moreno as Ohio's GOP Senate primary ends on a vicious note,-0.5,-0.5574,-0.3
+NBC,Trump,"Trump hush money trial postponed until mid-April, judge rules",-0.2,-0.2023,0.0
+NBC,Trump,Trump says there will be a 'bloodbath' if he loses the election,-0.8,-0.3182,-0.3
+NBC,Trump,"Fani Willis or special prosecutor must go for Trump GA case to go on, judge rules",0.0,0.4019,0.35714285714285715
+NBC,Trump,What's next in Trump's Georgia election interference case after judge allows DA Fani Willis to stay on the case,0.0,0.0,0.0
+NBC,Trump,"Trump, immigration, MAGA and more: How Ohio Republicans are weighing their Senate choice",0.0,0.0,0.5
