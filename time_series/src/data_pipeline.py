@@ -38,6 +38,7 @@ def get_channel_videos_14_days_ago(channel_id):
     # Get the date 14 days ago
     date_14_days_ago = datetime.now() - timedelta(days=14)
     date_str = date_14_days_ago.strftime('%Y-%m-%d')
+    # date_str = '2024-03-15'
 
     # Call the API to retrieve videos from the channel 14 days ago
     request = youtube.search().list(
@@ -70,6 +71,7 @@ def get_channel_videos_14_days_ago(channel_id):
 
     # Save the videos to a CSV file
     csv_file = f'/home/tianyu/YouTube_Data_Science/time_series/videos/{date_str}.csv'
+    # csv_file = f'{HISTORY_VIDEO_DIR}/{date_str}.csv'
     # Create the videos
     if not os.path.exists(csv_file):
         with open(csv_file, 'w', newline='') as file:
