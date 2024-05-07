@@ -37,7 +37,7 @@ Answer: The comment is """
         model_path=my_model_path,
         n_ctx=CONTEXT_SIZE,
         echo=True,
-        verbose=False
+        verbose=True
     )
 
     try:
