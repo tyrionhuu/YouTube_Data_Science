@@ -7,30 +7,49 @@ my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
 CONTEXT_SIZE = 512
 
 def target_stance_detection(text: str, video_title: str):
-    system_content = f"""
-You are master of all knowledge about US politics and history, literature, science, social science, philosophy,"""
+    system_prompt = """You are a political stance classifier tasked with labeling comments on US 
+political news videos from YouTube channels like CNN, Fox News, MSNBC, etc."""
 
-    prompt = f"""
-# CONTEXT #
-We are looking into a huge amount of comments on YouTube videos that are from US news channels like CNN, Fox News, 
-MSNBC, etc. We are interested in understanding the political stance of the comments. The comments can be about the 
-video,the news, or the political figures. The political stance can be conservative, liberal, or other
+    example_prompt = """
+I have a comment from a YouTube video titled "CNN-Full Speech: President Biden’s 2024 State of the Union address":
+Comment: "i think this was the worst state of the union i have ever watched"
 
-#################
+Based on the information about the comment above, please label this comment as one of the following: 
+conservative, liberal, or other. Note that you only return the label and nothing more."""
 
-# OBJECTIVE #
-You are a political stance classifier. You are given a US political news video. 
-Your task is to analyze the given comment and identify its political stance in the US political spectrum 
-as one of the following: conservative, liberal, or other
+    main_prompt = """
+Q: {video_title}
+Comment: {text}
+A: """
 
-#################
+    few_shot_examples = """
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: i think this was the worst state of the union i have ever watched
+A: CONSERVATIVE
+###
 
-# REQUIREMENTS #
-You need to provide a one-word answer, either conservative, liberal, or other
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: this is why trump wanted to build the wall
+A: CONSERVATIVE
+###
 
-#################
-Question: the comment is: {text}, and the video title is: {video_title}, is the comment conservative, liberal, or other?
-Answer: The comment is """
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: go joe biden im voting for you
+A: LIBERAL
+###
+
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: a thief among thieves
+A: LIBERAL
+###
+
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: we need communism fuck biden and trump
+A: OTHER
+###"""
+
+    # Combine the prompts
+    prompt = system_prompt + example_prompt + few_shot_examples + main_prompt.format(video_title=video_title, text=text)
 
     # Initialize the Llama model
     model = Llama(
@@ -43,9 +62,9 @@ Answer: The comment is """
     try:
         # Use the model to predict the political stance
         response = model(
-            system_content + prompt,
+            prompt,
             temperature=0.5,
-            stop=['.'],
+            stop=['\n', '#'],
         )["choices"][0]["text"]
     except ValueError as e:
         print(f"Error occurred: {e}")
