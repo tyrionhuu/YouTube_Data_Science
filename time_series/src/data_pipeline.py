@@ -38,7 +38,7 @@ def get_channel_videos_14_days_ago(channel_id):
     # Get the date 14 days ago
     date_14_days_ago = datetime.now() - timedelta(days=14)
     date_str = date_14_days_ago.strftime('%Y-%m-%d')
-    # date_str = '2024-03-21'
+    # date_str = '2024-03-14'
 
     # Call the API to retrieve videos from the channel 14 days ago
     request = youtube.search().list(
