@@ -46,7 +46,12 @@ A: LIBERAL
 Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
 Comment: we need communism fuck biden and trump
 A: OTHER
-###"""
+###
+
+Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
+Comment: oh what a disgrace of a man trump 2024
+A: CONSERVATIVE
+"""
 
     # Combine the prompts
     prompt = system_prompt + example_prompt + few_shot_examples + main_prompt.format(video_title=video_title, text=text)
@@ -88,14 +93,15 @@ A: OTHER
     return stance
 
 # Retrieve comments files and process each one
-comments_directory = '../preprocessed_comments/'
+comments_directory = '../preprocessed_comments2/'
 comments_files = [f for f in os.listdir(comments_directory)]
 original_directory = '../data2/'
 original_files = [f for f in os.listdir(original_directory) if f.endswith('.json')]
 titles = [f.split('.')[0] for f in original_files]
+print(titles)
 
 for title in titles:
-    comments_file = [f for f in comments_files if title in f][0]
+    comments_file = title + '_liked.csv'
     comments = pd.read_csv(comments_directory + comments_file)
     comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
     comments.to_csv(comments_directory + comments_file, index=False)
