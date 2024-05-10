@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import re
 
-my_model_path = '../models/'
+my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
 CONTEXT_SIZE = 1024
 
 
@@ -118,5 +118,5 @@ for file in comments_files:
     comments = pd.read_csv(comments_directory + file)
     title = extract_title(file)
     # print(title)
-    comments['stance_llama_8b'] = comments.apply(lambda x: stance_detection(x['comment'], title), axis=1)
+    comments['sentiment_llama_8b'] = comments.apply(lambda x: stance_detection(x['comment'], title), axis=1)
     comments.to_csv(output_dir + file, index=False)
