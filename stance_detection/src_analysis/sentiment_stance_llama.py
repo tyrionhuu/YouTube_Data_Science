@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import re
 
-my_model_path = '../models/codellama-7b.Q4_0.gguf'
+my_model_path = '../models/'
 CONTEXT_SIZE = 1024
 
 
