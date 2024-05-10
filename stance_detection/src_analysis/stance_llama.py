@@ -6,6 +6,7 @@ import re
 my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
 CONTEXT_SIZE = 512
 
+
 def target_stance_detection(text: str, video_title: str):
     system_prompt = """You are a political stance classifier tasked with labeling comments on US 
 political news videos from YouTube channels like CNN, Fox News, MSNBC, etc."""
@@ -92,16 +93,24 @@ A: CONSERVATIVE
 
     return stance
 
-# Retrieve comments files and process each one
-comments_directory = '../preprocessed_comments2/'
-comments_files = [f for f in os.listdir(comments_directory)]
-original_directory = '../data2/'
-original_files = [f for f in os.listdir(original_directory) if f.endswith('.json')]
-titles = [f.split('.')[0] for f in original_files]
-print(titles)
 
-for title in titles:
-    comments_file = title + '_liked.csv'
-    comments = pd.read_csv(comments_directory + comments_file)
+def extract_title(file_name: str):
+    # Extract the video title
+    title = file_name.rsplit('_', 1)[0]
+    return title
+
+
+# Retrieve comments files and process each one
+comments_directory = '../comments/comments2/'
+comments_files = [f for f in os.listdir(comments_directory) if f.endswith('.csv')]
+output_dir = '../comments/result2/'
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+for file in comments_files:
+    comments = pd.read_csv(comments_directory + file)
+    title = extract_title(file)
+    # print(title)
     comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
-    comments.to_csv(comments_directory + comments_file, index=False)
+    comments.to_csv(output_dir + file, index=False)
