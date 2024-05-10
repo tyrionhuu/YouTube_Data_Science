@@ -4,7 +4,7 @@ import pandas as pd
 import re
 
 my_model_path = '../models/Meta-Llama-3-8B-Instruct.Q8_0.gguf'
-CONTEXT_SIZE = 1024
+CONTEXT_SIZE = 512
 
 
 def stance_detection(text: str, video_title: str):
