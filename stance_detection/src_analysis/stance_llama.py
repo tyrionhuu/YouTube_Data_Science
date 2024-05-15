@@ -29,9 +29,6 @@ Comment: i think this was the worst state of the union i have ever watched
 A: CONSERVATIVE
 ###
 
-Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: this is why trump wanted to build the wall
-A: CONSERVATIVE
 ###
 
 Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
@@ -40,18 +37,9 @@ A: LIBERAL
 ###
 
 Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: a thief among thieves
-A: LIBERAL
-###
-
-Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
 Comment: we need communism fuck biden and trump
 A: OTHER
 ###
-
-Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: oh what a disgrace of a man trump 2024
-A: CONSERVATIVE
 """
 
     # Combine the prompts
