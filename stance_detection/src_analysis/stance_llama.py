@@ -97,7 +97,7 @@ output_dir = '../comments/result2/stance'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-file = 'CNN-Full Speech- President Biden’s 2024 State of the Union address_cleaned.csv'
+file = 'CNN-Full Speech: President Biden’s 2024 State of the Union address_cleaned.csv'
 comments = pd.read_csv(comments_directory + file)
 title = extract_title(file)
 # print(title)
