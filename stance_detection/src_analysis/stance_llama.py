@@ -92,14 +92,14 @@ def extract_title(file_name: str):
 # Retrieve comments files and process each one
 comments_directory = '../comments/comments2/'
 comments_files = [f for f in os.listdir(comments_directory) if f.endswith('.csv')]
-output_dir = '../comments/result2/'
+output_dir = '../comments/result2/stance'
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-for file in comments_files:
-    comments = pd.read_csv(comments_directory + file)
-    title = extract_title(file)
-    # print(title)
-    comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
-    comments.to_csv(output_dir + file, index=False)
+file = 'CNN-Full Speech- President Biden’s 2024 State of the Union address_cleaned.csv'
+comments = pd.read_csv(comments_directory + file)
+title = extract_title(file)
+# print(title)
+comments['stance_llama_8b'] = comments.apply(lambda x: target_stance_detection(x['comment'], title), axis=1)
+comments.to_csv(output_dir + file, index=False)
