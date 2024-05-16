@@ -40,6 +40,7 @@ Q: CNN-Full Speech: President Biden’s 2024 State of the Union address
 Comment: we need communism fuck biden and trump
 A: OTHER
 ###
+
 """
 
     # Combine the prompts
