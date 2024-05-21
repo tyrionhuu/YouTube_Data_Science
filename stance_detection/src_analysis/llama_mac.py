@@ -94,7 +94,7 @@ def extract_title(file_name: str):
 # Retrieve comments files and process each one
 comments_directory = '../comments/comments2/'
 comments_files = [f for f in os.listdir(comments_directory) if f.endswith('.csv')]
-output_dir = '../comments/result2/stance'
+output_dir = '../comments/result2/stance2/'
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
