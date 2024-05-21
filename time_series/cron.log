@@ -250,3 +250,11 @@ Videos from NBCNews saved to /home/tianyu/YouTube_Data_Science/time_series/video
 Videos from BBCNews saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-05-06.csv.
 42 videos saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-05-06.csv from 2024-05-06.
 Videos from aljazeeraenglish saved to /home/tianyu/YouTube_Data_Science/time_series/videos/2024-05-06.csv.
+Traceback (most recent call last):
+  File "/home/tianyu/YouTube_Data_Science/time_series/src/data_pipeline.py", line 98, in <module>
+    main()
+  File "/home/tianyu/YouTube_Data_Science/time_series/src/data_pipeline.py", line 93, in main
+    csv_file = get_channel_videos_14_days_ago(channel_id)
+  File "/home/tianyu/YouTube_Data_Science/time_series/src/data_pipeline.py", line 77, in get_channel_videos_14_days_ago
+    with open(csv_file, 'w', newline='') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '../videos/history/2024-05-05.csv'
