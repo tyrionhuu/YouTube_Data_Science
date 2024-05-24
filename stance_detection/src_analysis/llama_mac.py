@@ -6,35 +6,25 @@ import re
 my_model_path = '../models/codellama-7b.Q4_0.gguf'
 CONTEXT_SIZE = 512
 
-
 def target_stance_detection(text: str, video_title: str):
     system_prompt = """You are a political stance classifier tasked with labeling comments on US 
 political news videos from YouTube channels like CNN, Fox News, MSNBC, etc."""
 
-    example_prompt = """
-I have a comment about US political news:
-Comment: "i think this was the worst state of the union i have ever watched"
-Based on the information about the comment above, please label this comment's stance towards both Trump and Biden as one of the following: 
-- PRO
-- ANTI
-- OTHER 
+    detailed_instructions = """
+Your task is to analyze the sentiment of YouTube comments towards two political figures, Trump and Biden, based on the content of the comments and the context provided by the video title.
+For each comment, you need to determine if there is a stance towards Trump and Biden, and categorize each stance as one of the following:
+- PRO: The comment expresses positive sentiment or support.
+- ANTI: The comment expresses negative sentiment or opposition.
+- OTHER: The comment is neutral, ambiguous, or unrelated.
 
-Note that you only return the labels in the format: Trump: [label], Biden: [label]"""
-
-    main_prompt = """
-Video Title: {video_title}
-Comment: {text}
-A: """
+You should format your response strictly as: Trump: [label], Biden: [label]
+Consider the video title carefully as it provides important context that may influence the stance expressed in the comment.
+"""
 
     few_shot_examples = """
 Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: i think this was the worst state of the union i have ever watched
+Comment: wow they gave him a great drug cocktail
 A: Trump: OTHER, Biden: ANTI
-###
-
-Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: go joe biden im voting for you
-A: Trump: OTHER, Biden: PRO
 ###
 
 Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
@@ -43,14 +33,23 @@ A: Trump: ANTI, Biden: ANTI
 ###
 
 Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: trump was a great president, biden is terrible
-A: Trump: PRO, Biden: ANTI
+Comment: sadly i believe our country is gone thanks to the crooks in that room
+A: Trump: OTHER, Biden: ANTI
 ###
 
+Video Title: Fox News - Breaking: Trump announces 2024 run for president
+Comment: this is a disaster, we need new leadership
+A: Trump: ANTI, Biden: OTHER
+###
 """
 
+    main_prompt = """
+Video Title: {video_title}
+Comment: {text}
+A: """
+
     # Combine the prompts
-    prompt = system_prompt + example_prompt + few_shot_examples + main_prompt.format(video_title=video_title, text=text)
+    prompt = system_prompt + detailed_instructions + few_shot_examples + main_prompt.format(video_title=video_title, text=text)
 
     # Initialize the Llama model
     model = Llama(
@@ -64,13 +63,13 @@ A: Trump: PRO, Biden: ANTI
         # Use the model to predict the political stance
         response = model(
             prompt,
-            temperature=0.2,
-            stop=['#'],
+            temperature=0.5,  # Adjusted temperature for better response quality
+            stop=['#', '\n\n'],
         )["choices"][0]["text"]
     except ValueError as e:
         print(f"Error occurred: {e}")
         print("Skipping...")
-        return ("OTHER", "OTHER")
+        return ("NONE", "NONE")
 
     # Extract stance from response
     trump_stance = re.search(r'Trump: (PRO|ANTI|OTHER)', response)
@@ -81,7 +80,7 @@ A: Trump: PRO, Biden: ANTI
         biden_label = biden_stance.group(1)
         stance = (trump_label, biden_label)
     else:
-        stance = ("OTHER", "OTHER")  # Default if no stance is found
+        stance = ("NONE", "NONE")  # Default if no stance is found
 
     print(f"{text}")
     print("*******************")
@@ -105,7 +104,6 @@ output_dir = '../comments/result2/stance2/'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-# file = 'CNN-Full Speech: President Biden’s 2024 State of the Union address_cleaned.csv'
 for file in comments_files:
     comments = pd.read_csv(comments_directory + file)
     title = extract_title(file)
