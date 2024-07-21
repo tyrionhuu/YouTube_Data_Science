@@ -8,7 +8,7 @@ import csv
 DEVELOPER_KEY = 'AIzaSyAiTWskBEIJVFrneK99_afD97mrff6yah0'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
-HISTORY_VIDEO_DIR = '../videos/20240611 to 20240702'
+HISTORY_VIDEO_DIR = '../videos/history2'
 CHANNEL_IDS = {
     'ABCNews': 'UCBi2mrWuNuyYy4gbM6fU18Q',
     'FoxNews': 'UCXIJgqnII2ZOINSWNOGFThA',
