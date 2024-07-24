@@ -144,7 +144,7 @@ def main():
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
     # Get video details
-    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=PYCSy28-2Jc")
+    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=fmZJ7lhroA8")
     video_details = get_video_details(youtube, id=video_id)
     video_comments = get_video_comments(youtube, video_id)
     video_transcript = get_video_transcript(video_id)
@@ -156,9 +156,9 @@ def main():
         "video_transcript": video_transcript,
         "video_comments": video_comments
     }
-    if not os.path.exists("../original_data/trump_guilty"):
-        os.makedirs("../original_data/trump_guilty")
-    with open(f"../original_data/trump_guilty/{video_channel_display_name}-{video_title}.json", "w") as json_file:
+    if not os.path.exists("../original_data/debate"):
+        os.makedirs("../original_data/debate")
+    with open(f"../original_data/debate/{video_channel_display_name}-{video_title}.json", "w") as json_file:
         json.dump(video_info, json_file, indent=4)
 
     print("Video details saved to 'video_info.json' file.")

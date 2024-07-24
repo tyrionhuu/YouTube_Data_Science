@@ -8,7 +8,7 @@ import csv
 DEVELOPER_KEY = 'AIzaSyAiTWskBEIJVFrneK99_afD97mrff6yah0'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
-HISTORY_VIDEO_DIR = '../videos/history'
+HISTORY_VIDEO_DIR = '../videos/history2'
 CHANNEL_IDS = {
     'ABCNews': 'UCBi2mrWuNuyYy4gbM6fU18Q',
     'FoxNews': 'UCXIJgqnII2ZOINSWNOGFThA',
@@ -38,7 +38,7 @@ def get_channel_videos_14_days_ago(channel_id):
     # Get the date 14 days ago
     date_14_days_ago = datetime.now() - timedelta(days=14)
     date_str = date_14_days_ago.strftime('%Y-%m-%d')
-    # date_str = '2024-04-14'
+    # date_str = '2024-07-02'
 
     # Call the API to retrieve videos from the channel 14 days ago
     request = youtube.search().list(
