@@ -9,3 +9,5 @@ matplotlib~=3.9.1
 
 # to run examples
 pandas~=2.2.2
+
+scikit-learn~=1.5.1

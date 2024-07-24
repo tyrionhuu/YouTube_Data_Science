@@ -1,115 +1,86 @@
-from llama_cpp import Llama
-import os
 import pandas as pd
 import re
+from llama_cpp import Llama
+from sklearn.metrics import accuracy_score
 
+# Model configuration
 my_model_path = '../models/codellama-7b.Q4_0.gguf'
-CONTEXT_SIZE = 512
+CONTEXT_SIZE = 1024
+MAX_TOKENS = 1024  # Adjust as needed
+TEMPERATURE = 0.5  # Lower temperature for more focused output
 
-def target_stance_detection(text: str, video_title: str):
-    system_prompt = """You are a political stance classifier tasked with labeling comments on US 
-political news videos from YouTube channels like CNN, Fox News, MSNBC, etc."""
+# Load the Llama model
+llama_model = Llama(model_path=my_model_path, context_size=CONTEXT_SIZE, verbose=True)
 
-    detailed_instructions = """
-Your task is to analyze the sentiment of YouTube comments towards two political figures, Trump and Biden, based on the content of the comments and the context provided by the video title.
-For each comment, you need to determine if there is a stance towards Trump and Biden, and categorize each stance as one of the following:
-- PRO: The comment expresses positive sentiment or support.
-- ANTI: The comment expresses negative sentiment or opposition.
-- OTHER: The comment is neutral, ambiguous, or unrelated.
+def stance_detection(text: str, target: str):
+    # Using the recommended prompt format for Llama 3.1
+    system_prompt = """<|begin_of_text|><|start_header_id|>system<|end_header_id|>You are a political stance 
+    classifier tasked with analyzing comments on political figures based on their content. Classify the stance as 
+    'FAVOR', 'AGAINST', or 'NONE' based strictly on the comment's content and context."""
 
-You should format your response strictly as: Trump: [label], Biden: [label]
-Consider the video title carefully as it provides important context that may influence the stance expressed in the comment.
-"""
+    few_shot_examples = """<|eot_id|><|start_header_id|>user<|end_header_id|>Target: Joe Biden\nText: Joe Biden is 
+    looking to gather votes from unsuspecting voters. One must remember, Good Ole Boy Joe supported a Grand Wizard of 
+    the KKK. Joe cannot deny it.<|eot_id|><|start_header_id|>assistant<|end_header_id|>AGAINST<|eot_id
+    |><|start_header_id|>user<|end_header_id|>Target: Joe Biden\nText: Check out the latest podcast conversation 
+    between @JoeBiden and @AndrewYang. #HeresTheDeal #UnitedForJoe #BarnstormersForAmerica 
+    #ITrustJoe<|eot_id|><|start_header_id|>assistant<|end_header_id|>FAVOR<|eot_id|><|start_header_id|>user
+    <|end_header_id|>Target: Joe Biden\nText: DJT should go to 
+    prison.<|eot_id|><|start_header_id|>assistant<|end_header_id|>NONE"""
 
-    few_shot_examples = """
-Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: wow they gave him a great drug cocktail
-A: Trump: OTHER, Biden: ANTI
-###
+    user_input = (f"<|eot_id|><|start_header_id|>user<|end_header_id|>Target: Joe Biden\nText: {text}<|eot_id"
+                  f"|><|start_header_id|>assistant<|end_header_id|>")
 
-Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: we need communism fuck biden and trump
-A: Trump: ANTI, Biden: ANTI
-###
+    prompt = f"{system_prompt}{few_shot_examples}{user_input}"
 
-Video Title: CNN-Full Speech: President Biden’s 2024 State of the Union address
-Comment: sadly i believe our country is gone thanks to the crooks in that room
-A: Trump: OTHER, Biden: ANTI
-###
-
-Video Title: Fox News - Breaking: Trump announces 2024 run for president
-Comment: this is a disaster, we need new leadership
-A: Trump: ANTI, Biden: OTHER
-###
-"""
-
-    main_prompt = """
-Video Title: {video_title}
-Comment: {text}
-A: """
-
-    # Combine the prompts
-    prompt = system_prompt + detailed_instructions + few_shot_examples + main_prompt.format(video_title=video_title, text=text)
-
-    # Initialize the Llama model
-    model = Llama(
-        model_path=my_model_path,
-        n_ctx=CONTEXT_SIZE,
-        echo=True,
-        verbose=False
-    )
-
+    # Generate prediction
     try:
-        # Use the model to predict the political stance
-        response = model(
-            prompt,
-            temperature=0.5,  # Adjusted temperature for better response quality
-            stop=['#', '\n\n'],
-        )["choices"][0]["text"]
-    except ValueError as e:
-        print(f"Error occurred: {e}")
-        print("Skipping...")
-        return ("NONE", "NONE")
+        result = llama_model(
+            prompt=prompt,
+            max_tokens=MAX_TOKENS,
+            temperature=TEMPERATURE,
+            echo=False,
+            stop=["<"]
+        )
+        print(result)
+        if isinstance(result, dict) and 'choices' in result and len(result['choices']) > 0:
+            response = result['choices'][0]['text'].strip()
+        else:
+            response = str(result).strip()
+        print(f"Response: {response}")
+    except Exception as e:
+        response = f"Error: {e}"
+        print(f"Error generating response: {e}")
 
-    # Extract stance from response
-    trump_stance = re.search(r'Trump: (PRO|ANTI|OTHER)', response)
-    biden_stance = re.search(r'Biden: (PRO|ANTI|OTHER)', response)
-
-    if trump_stance and biden_stance:
-        trump_label = trump_stance.group(1)
-        biden_label = biden_stance.group(1)
-        stance = (trump_label, biden_label)
+    # Extract the stance label from the result
+    match = re.search(r'\b(FAVOR|AGAINST|NONE)\b', response)
+    if match:
+        return match.group(1)
     else:
-        stance = ("NONE", "NONE")  # Default if no stance is found
+        return "NONE"  # Default to NONE if no match is found
 
-    print(f"{text}")
-    print("*******************")
-    print(f"{response}")
-    print("-------------------")
-    print(f"{stance}")
-    print("+++++++++++++++++++++")
+# Load the training data from the specified file path
+file_path = '../training_data/raw_train_biden.csv'
+test_data = pd.read_csv(file_path)
 
-    return stance
+# Randomly select 50 examples
+test_data_sample = test_data.sample(n=200, random_state=42)
 
-def extract_title(file_name: str):
-    # Extract the video title
-    title = file_name.rsplit('_', 1)[0]
-    return title
+# Generate predictions
+test_data_sample['predicted_stance'] = test_data_sample.apply(lambda row: stance_detection(row['Tweet'], row['Target']), axis=1)
 
-# Retrieve comments files and process each one
-comments_directory = '../comments/comments2/'
-comments_files = [f for f in os.listdir(comments_directory) if f.endswith('.csv')]
-output_dir = '../comments/result2/stance2/'
+# Calculate accuracy
+accuracy = accuracy_score(test_data_sample['Stance'], test_data_sample['predicted_stance'])
+print(f"Accuracy: {accuracy}")
 
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+# Display the results
+print(test_data_sample)
 
-for file in comments_files:
-    comments = pd.read_csv(comments_directory + file)
-    title = extract_title(file)
-
-    # Apply the stance detection and split the tuple into two columns
-    comments[['stance_trump', 'stance_biden']] = comments.apply(lambda x: pd.Series(target_stance_detection(x['comment'], title)), axis=1)
-
-    # Save the modified DataFrame to a new CSV file
-    comments.to_csv(os.path.join(output_dir, file), index=False)
+# Print out the wrongly classified texts
+wrong_classifications = test_data_sample[test_data_sample['Stance'] != test_data_sample['predicted_stance']]
+print("Wrongly classified texts:")
+for index, row in wrong_classifications.iterrows():
+    print(f"Tweet: {row['Tweet']}")
+    print(f"Target: {row['Target']}")
+    print(f"True Stance: {row['Stance']}")
+    print(f"Predicted Stance: {row['predicted_stance']}")
+    print()

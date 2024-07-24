@@ -144,7 +144,7 @@ def main():
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
     # Get video details
-    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=fmZJ7lhroA8")
+    video_id = get_video_id_by_url("https://www.youtube.com/watch?v=qqG96G8YdcE")
     video_details = get_video_details(youtube, id=video_id)
     video_comments = get_video_comments(youtube, video_id)
     video_transcript = get_video_transcript(video_id)
