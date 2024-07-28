@@ -4,7 +4,7 @@ from llama_cpp import Llama
 from sklearn.metrics import accuracy_score
 
 # Model configuration
-my_model_path = '../models/codellama-7b.Q4_0.gguf'
+my_model_path = '../models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf'
 CONTEXT_SIZE = 1024
 MAX_TOKENS = 1024  # Adjust as needed
 TEMPERATURE = 0.5  # Lower temperature for more focused output
@@ -14,7 +14,7 @@ llama_model = Llama(model_path=my_model_path, context_size=CONTEXT_SIZE, verbose
 
 def stance_detection(text: str, target: str):
     # Using the recommended prompt format for Llama 3.1
-    system_prompt = """<|begin_of_text|><|start_header_id|>system<|end_header_id|>You are a political stance 
+    system_prompt = """<|start_header_id|>system<|end_header_id|>You are a political stance 
     classifier tasked with analyzing comments on political figures based on their content. Classify the stance as 
     'FAVOR', 'AGAINST', or 'NONE' based strictly on the comment's content and context."""
 

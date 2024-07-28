@@ -1,6 +1,7 @@
 import json
 import urllib.parse as p
 import os
+import time
 
 from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -9,22 +10,13 @@ DEVELOPER_KEY = 'AIzaSyAiTWskBEIJVFrneK99_afD97mrff6yah0'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 
-
-# CHANNEL_DISPLAY_NAMES = ['FoxNews', 'CNN', 'BBCNews', 'ABCNews', 'NBCNews']
-
 def get_video_id_by_url(url):
-    """
-    Return the Video ID from the video `url`
-    """
-    # Split URL parts
     parsed_url = p.urlparse(url)
-    # Get the video ID by parsing the query of the URL
     video_id = p.parse_qs(parsed_url.query).get("v")
     if video_id:
         return video_id[0]
     else:
         raise Exception(f"Wasn't able to parse video URL: {url}")
-
 
 def get_video_details(youtube, **kwargs):
     return youtube.videos().list(
@@ -32,14 +24,7 @@ def get_video_details(youtube, **kwargs):
         **kwargs
     ).execute()
 
-
 def get_video_transcript(video_id):
-    # transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-    # transcript_text = ""
-    # for transcript in transcript_list:
-    #     for item in transcript.fetch():
-    #         transcript_text += item['text'] + " "
-    # return transcript_text.strip()
     try:
         transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
         transcript_text = ""
@@ -49,7 +34,6 @@ def get_video_transcript(video_id):
     except Exception as e:
         print("An error occurred:", e)
         return ""
-
 
 def get_comment_replies(youtube, comment_id):
     replies = []
@@ -65,13 +49,11 @@ def get_comment_replies(youtube, comment_id):
             ).execute()
 
             for item in response['items']:
-                # Extract commenter's information
                 commenter_display_name = item['snippet']['authorDisplayName']
                 commenter_channel_id = item['snippet']['authorChannelId']['value']
                 comment_text = item['snippet']['textDisplay']
                 likes_count = item['snippet']['likeCount']
 
-                # Create comment dictionary
                 reply_data = {
                     "commenter_display_name": commenter_display_name,
                     "commenter_channel_id": commenter_channel_id,
@@ -91,10 +73,10 @@ def get_comment_replies(youtube, comment_id):
 
     return replies
 
-
 def get_video_comments(youtube, video_id):
     comments = []
     nextPageToken = None
+    total_comments_collected = 0
 
     while True:
         try:
@@ -107,17 +89,14 @@ def get_video_comments(youtube, video_id):
             ).execute()
 
             for item in response['items']:
-                # Extract commenter's information
                 commenter_display_name = item['snippet']['topLevelComment']['snippet']['authorDisplayName']
                 commenter_channel_id = item['snippet']['topLevelComment']['snippet']['authorChannelId']['value']
                 comment_text = item['snippet']['topLevelComment']['snippet']['textDisplay']
                 likes_count = item['snippet']['topLevelComment']['snippet']['likeCount']
                 comment_id = item['snippet']['topLevelComment']['id']
 
-                # Get replies for this comment
                 comment_replies = get_comment_replies(youtube, comment_id)
 
-                # Create comment dictionary
                 comment_data = {
                     "commenter_display_name": commenter_display_name,
                     "commenter_channel_id": commenter_channel_id,
@@ -127,6 +106,12 @@ def get_video_comments(youtube, video_id):
                 }
 
                 comments.append(comment_data)
+                total_comments_collected += 1
+
+                if total_comments_collected >= 7000:
+                    print("Collected 6000 comments, pausing for 24 hours...")
+                    time.sleep(86400)  # Pause for 24 hours
+                    total_comments_collected = 0  # Reset the counter
 
             nextPageToken = response.get('nextPageToken')
             if not nextPageToken:
@@ -138,19 +123,16 @@ def get_video_comments(youtube, video_id):
 
     return comments
 
-
 def main():
-    # Create a YouTube API client
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
-    # Get video details
     video_id = get_video_id_by_url("https://www.youtube.com/watch?v=qqG96G8YdcE")
     video_details = get_video_details(youtube, id=video_id)
     video_comments = get_video_comments(youtube, video_id)
     video_transcript = get_video_transcript(video_id)
     video_channel_display_name = video_details['items'][0]['snippet']['channelTitle']
     video_title = video_details['items'][0]['snippet']['title']
-    # Save the video details to a JSON file
+
     video_info = {
         "video_details": video_details,
         "video_transcript": video_transcript,
@@ -162,7 +144,6 @@ def main():
         json.dump(video_info, json_file, indent=4)
 
     print("Video details saved to 'video_info.json' file.")
-
 
 if __name__ == '__main__':
     main()
