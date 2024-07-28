@@ -5,7 +5,7 @@ import re
 from llama_cpp import Llama
 
 # Model configuration
-my_model_path = '../models/Meta-Llama-3.1-70B-Instruct-Q4_K_M.gguf'
+my_model_path = '../models/Meta-Llama-3.1-8B-Instruct-Q4_K_S.gguf'
 CONTEXT_SIZE = 1024
 MAX_TOKENS = 1024  # Adjust as needed
 TEMPERATURE = 0.5  # Lower temperature for more focused output
