@@ -94,8 +94,8 @@ def process_csv(input_csv_path, output_csv_path):
         print()
 
     # Add the results to the DataFrame
-    df['Biden Stance'] = biden_stances
-    df['Trump Stance'] = trump_stances
+    df['biden_stance'] = biden_stances
+    df['trump_stance'] = trump_stances
 
     # Save the DataFrame to a new CSV file
     df.to_csv(output_csv_path, index=False)
