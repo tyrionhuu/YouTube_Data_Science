@@ -104,8 +104,10 @@ def process_csv(input_csv_path, output_csv_path):
 
 def main():
     # Paths to the input and output CSV files
-    input_csv = "../comments/trump_guilty/Fox News-Trump found guilty on all 34 counts_cleaned.csv"
-    output_csv = '../comments/trump_guilty/Fox News-Trump found guilty on all 34 counts_cleaned_classified_comments.csv'  # Replace with your desired output CSV file path
+    input_csv = ("../comments/trump_guilty/CNN-Donald Trump convicted of falsifying business records in hush money "
+                 "scheme_cleaned.csv")
+    output_csv = ('../comments/trump_guilty/CNN-Donald Trump convicted of falsifying business records in hush money '
+                  'scheme_cleaned_classified_comments.csv')  # Replace with your desired output CSV file path
 
     # Process the CSV file and classify comments
     process_csv(input_csv, output_csv)
