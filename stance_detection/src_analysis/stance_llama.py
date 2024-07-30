@@ -103,7 +103,7 @@ def process_csv(input_csv_path, output_csv_path):
 
 
 def main():
-    comments_dir = "../comments/trump_guilty/"
+    comments_dir = "../comments/state_of_union/"
     files = [f for f in os.listdir(comments_dir) if f.endswith('cleaned.csv')]
     for file in files:
         input_csv = comments_dir + file
