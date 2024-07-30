@@ -16,10 +16,15 @@ llama_model = Llama(model_path=my_model_path, context_size=CONTEXT_SIZE, verbose
 
 def stance_detection(text: str, video_title: str):
     # Using the recommended prompt format for Llama 3.1
+    # system_prompt = f"""<|start_header_id|>system<|end_header_id|>You are a political stance classifier tasked with
+    # analyzing comments on political figures. The comments are responses to a video titled '{video_title}'. Determine
+    # the stance for both 'Joe Biden' and 'Donald Trump' as 'FAVOR', 'AGAINST', or 'NONE' based on the content of the
+    # comment and the video title which might provide information about the subject."""
     system_prompt = f"""<|start_header_id|>system<|end_header_id|>You are a political stance classifier tasked with 
-    analyzing comments on political figures. The comments are responses to a video titled '{video_title}'. Determine 
-    the stance for both 'Joe Biden' and 'Donald Trump' as 'FAVOR', 'AGAINST', or 'NONE' based strictly on the content 
-    and context of the comment."""
+    analyzing comments on political figures. The comments are responses to a video about US president Joe Biden 
+    delivering the State of Union address. Determine the stance for both 'Joe Biden' and 'Donald Trump' as 'FAVOR', 
+    'AGAINST', or 'NONE' based on the content of the comment and the video title which might provide information 
+    about the subject."""
 
     few_shot_examples = """<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Joe Biden is looking to gather 
     votes from unsuspecting voters. One must remember, Good Ole Boy Joe supported a Grand Wizard of the KKK. Joe 
