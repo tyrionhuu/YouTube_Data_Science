@@ -133,8 +133,8 @@ def main():
     youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
     video_urls = [
-        "https://www.youtube.com/watch?v=qqG96G8YdcE"
-        # "https://www.youtube.com/watch?v=fmZJ7lhroA8"
+        # "https://www.youtube.com/watch?v=qqG96G8YdcE"
+        "https://www.youtube.com/watch?v=fmZJ7lhroA8"
     ]
 
     for url in video_urls:
