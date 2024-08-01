@@ -15,26 +15,22 @@ llama_model = Llama(model_path=my_model_path, context_size=CONTEXT_SIZE, verbose
 
 
 def stance_detection(text: str, video_title: str):
-    # Using the recommended prompt format for Llama 3.1
-    # system_prompt = f"""<|start_header_id|>system<|end_header_id|>You are a political stance classifier tasked with
-    # analyzing comments on political figures. The comments are responses to a video titled '{video_title}'. Determine
-    # the stance for both 'Joe Biden' and 'Donald Trump' as 'FAVOR', 'AGAINST', or 'NONE' based on the content of the
-    # comment and the video title which might provide information about the subject."""
-    system_prompt = f"""<|start_header_id|>system<|end_header_id|>You are a political stance classifier tasked with 
-    analyzing comments on political figures. The comments are responses to a video about US president Joe Biden 
-    delivering the State of Union address. Determine the stance for both 'Joe Biden' and 'Donald Trump' as 'FAVOR', 
-    'AGAINST', or 'NONE' based on the content of the comment and the video title which might provide information 
-    about the subject."""
+    system_prompt = (
+        f"You are a political stance classifier tasked with analyzing comments on political figures. "
+        f"The comments are responses to a video titled which will be given to you. Determine the stance for both 'Joe "
+        f"Biden' and 'Donald Trump' as 'FAVOR', 'AGAINST', or 'NONE' based on the content of the comment. If the "
+        f"comment is ambiguous, try to infer the likely stance based on context and common references."
+    )
 
-    few_shot_examples = """<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Joe Biden is looking to gather 
-    votes from unsuspecting voters. One must remember, Good Ole Boy Joe supported a Grand Wizard of the KKK. Joe 
-    cannot deny it.<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: AGAINST; Trump: 
-    NONE<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Check out the latest podcast conversation between 
-    @JoeBiden and @AndrewYang. #HeresTheDeal #UnitedForJoe #BarnstormersForAmerica 
-    #ITrustJoe<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: FAVOR; Trump: 
-    NONE<|eot_id|><|start_header_id|>user<|end_header_id|>Text: DJT should go to 
-    prison.<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: NONE; Trump: 
-    AGAINST<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Make America great again! Trump 
+    few_shot_examples = """<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Joe Biden is looking to gather
+    votes from unsuspecting voters. One must remember, Good Ole Boy Joe supported a Grand Wizard of the KKK. Joe
+    cannot deny it.<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: AGAINST; Trump:
+    NONE<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Check out the latest podcast conversation between
+    @JoeBiden and @AndrewYang. #HeresTheDeal #UnitedForJoe #BarnstormersForAmerica
+    #ITrustJoe<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: FAVOR; Trump:
+    NONE<|eot_id|><|start_header_id|>user<|end_header_id|>Text: DJT should go to
+    prison.<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: NONE; Trump:
+    AGAINST<|eot_id|><|start_header_id|>user<|end_header_id|>Text: Make America great again! Trump
     2020!<|eot_id|><|start_header_id|>assistant<|end_header_id|>Biden: NONE; Trump: FAVOR"""
 
     user_input = f"""<|eot_id|><|start_header_id|>user<|end_header_id|>Text: {text}<|eot_id|><|start_header_id
@@ -108,12 +104,13 @@ def process_csv(input_csv_path, output_csv_path):
 
 
 def main():
-    comments_dir = "../comments/state_of_union/"
-    files = [f for f in os.listdir(comments_dir) if f.endswith('cleaned.csv')]
-    for file in files:
-        input_csv = comments_dir + file
-        output_csv = comments_dir + file.replace('cleaned', 'classified')
-        process_csv(input_csv, output_csv)
+    stance_detection("hes such a clowm", "Fox News-Watch: President Biden's State of the Union address and the GOP's response_classified")
+    # comments_dir = "../comments/state_of_union/"
+    # files = [f for f in os.listdir(comments_dir) if f.endswith('cleaned.csv')]
+    # for file in files:
+    #     input_csv = comments_dir + file
+    #     output_csv = comments_dir + file.replace('cleaned', 'classified')
+    #     process_csv(input_csv, output_csv)
     # Paths to the input and output CSV files
     # input_csv = ("../comments/trump_guilty/CNN-Donald Trump convicted of falsifying business records in hush money "
     #              "scheme_cleaned.csv")
