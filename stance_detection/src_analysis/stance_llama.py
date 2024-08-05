@@ -13,7 +13,6 @@ TEMPERATURE = 0.5  # Lower temperature for more focused output
 # Load the Llama model
 llama_model = Llama(model_path=my_model_path, context_size=CONTEXT_SIZE, verbose=True)
 
-
 def stance_detection(text: str, video_title: str):
     system_prompt = (
         f"You are a political stance classifier tasked with analyzing comments on political figures. "
