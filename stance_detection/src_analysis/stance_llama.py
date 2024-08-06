@@ -103,19 +103,18 @@ def process_csv(input_csv_path, output_csv_path):
 
 
 def main():
-    stance_detection("hes such a clowm", "Fox News-Watch: President Biden's State of the Union address and the GOP's response_classified")
-    # comments_dir = "../comments/state_of_union/"
-    # files = [f for f in os.listdir(comments_dir) if f.endswith('cleaned.csv')]
-    # for file in files:
-    #     input_csv = comments_dir + file
-    #     output_csv = comments_dir + file.replace('cleaned', 'classified')
-    #     process_csv(input_csv, output_csv)
+    comments_dir = "../comments/debate/"
+    files = [f for f in os.listdir(comments_dir) if f.endswith('cleaned.csv')]
+    for file in files:
+        input_csv = comments_dir + file
+        output_csv = comments_dir + file.replace('cleaned', 'classified')
+        process_csv(input_csv, output_csv)
     # Paths to the input and output CSV files
     # input_csv = ("../comments/trump_guilty/CNN-Donald Trump convicted of falsifying business records in hush money "
     #              "scheme_cleaned.csv")
     # output_csv = ('../comments/trump_guilty/CNN-Donald Trump convicted of falsifying business records in hush money '
     #               'scheme_cleaned_classified_comments.csv')  # Replace with your desired output CSV file path
-    #
+
     # Process the CSV file and classify comments
     # process_csv(input_csv, output_csv)
 
