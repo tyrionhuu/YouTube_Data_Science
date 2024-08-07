@@ -1,0 +1,11 @@
+comment,sentiment_gemini,sentiment_vader,target,stance
+this judge is a corrupt pos,-1.0,0.0,This judge,AGAINST
+the orange ahole may have to sell more classified secrets,-0.3,0.0,Trump,AGAINST
+an idi can see this is fraudulent even trumps bankers basically said theres nothing here what a joke no question is going to be overturned,-0.75,-0.7421,Trump,AGAINST
+a nice verdict against the trump crime family,0.75,-0.0258,Trump,AGAINST
+time to up those merchandise fundraising and etc sales mr trump because we know you dont have this much cashmr im a billionaire,-0.3835,0.0,Trump,AGAINST
+another loss by the worlds biggest loser of course this is just the beginning for that thing,-0.8,-0.6908,Trump,AGAINST
+humpy trumpty sat on a wall humpty trumpty had a great full,0.3,0.6249,Trump,NEUTRAL
+trump doesnt care he will let his supporters who think hes their saviour pay this fine as usual the guy is a big fat con man,-0.9,0.2197,trump,AGAINST
+has trump screamed on his media outlet yet hes going to blame habba after he goes on a racist rant against ag james,-0.5,-0.8779,Trump,NEUTRAL
+this ruling wont affect trump his cult devotees will pay,-0.6,0.0258,Trump,NEUTRAL
